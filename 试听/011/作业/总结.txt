@@ -1,0 +1,167 @@
+# 总结
+
+------
+
+
+
+#### CSS渐变
+
+###### CSS3 线性渐变
+
+没有设置渐变方向时，默认从上到下渐变，可以设置至少两个颜色（渐变也支持透明度 transparent）实现渐变
+
+线性渐变方向：8个  to 方向单词  top  bottom left right
+
+```css
+        .div1{
+            background: linear-gradient(to right,pink,white);
+        }
+```
+
+###### CSS3 径向渐变
+
+```css
+        .div2{
+            background: radial-gradient(ellipse,red 5%,green 15%,yellow 60%);
+        }
+```
+
+------
+
+#### CSS3过渡
+
+CSS3 过渡是元素从一种样式逐渐改变为另一种的效果。要实现这一点，必须规定两项内容：
+
+1. 指定要添加效果的CSS属性
+2. 指定效果的持续时间。
+3. 要添加多个样式的变换效果，添加的属性由逗号分隔。
+4. all:指定过渡实现所有样式
+
+```css
+div {
+    transition: width 2s, height 2s, transform 2s;
+ 	-webkit-transition: width 2s, height 2s,-webkit-transform 2s; }
+```
+
+###### 过度属性
+
+| 属性                                                         | 描述                                         | CSS  |
+| ------------------------------------------------------------ | -------------------------------------------- | ---- |
+| [transition] | 简写属性，用于在一个属性中设置四个过渡属性。 | 3    |
+| [transition-property] | 规定应用过渡的 CSS 属性的名称。              | 3    |
+| [transition-duration] | 定义过渡效果花费的时间。默认是 0。           | 3    |
+| [transition-timing-function] | 规定过渡效果的时间曲线。默认是 "ease"。      | 3    |
+| [transition-delay] | 规定过渡效果何时开始。默认是 0。             | 3    |
+
+------
+
+#### CSS3转换
+
+1. 转换的起始点：可以指定旋转时的中心点
+
+   ```css
+   transform-origin:center;
+   ```
+
+2. 转换：translate()平移  X偏移量,Y偏移量  向右向下为正值，反方向负值
+
+   ```css
+   transform: translate(30px,40px);
+   ```
+
+3. rorate:旋转  设置旋转度数  deg代表度的单位  正值是顺时针旋转  负值逆时针旋转
+
+   ```css
+   transform: rotate(-90deg);
+   ```
+
+4. scale:缩放  可以分别设置X和Y的缩放比例
+
+   ```css
+   transform: scale(2);
+   ```
+
+5. skew:倾斜  分别设置X和Y的倾斜度数  单位deg
+
+   ```css
+   transform:skew(30deg,20deg); 
+   ```
+
+6. rotateX() rotateY()  3D转换
+
+   ```css
+   div {
+       /* 围绕其在一个给定度数X轴旋转的元素 */ 
+       transform: rotateX(120deg); 
+       -webkit-transform: rotateX(120deg); /* Safari 与 Chrome */ 
+   }
+   ```
+
+------
+
+#### CSS3动画
+
+@keyframes 规则
+
+```css
+@keyframes myfirst { 
+    0% {background: red;} 
+    25% {background: yellow;} 
+    50% {background: blue;} 
+    100% {background: green;} 
+} 
+@-webkit-keyframes myfirst /* Safari 与 Chrome */ { 
+    0% {background: red;} 
+    25% {background: yellow;} 
+    50% {background: blue;} 
+    100% {background: green;} 
+}
+```
+
+调用动画：动画名  持续时间 
+
+```css
+#div1{
+      animation: myfirst 5s linear 2s 3 alternate;
+      -webkit-animation: myfirst 5s linear 2s 3 alternate;
+      /* animation-name: one;动画名字 */
+      /* animation-duration: 5s;持续时间 */
+      /* animation-timing-function: linear;速度 */
+      /* animation-delay: 2s;延迟时间 */
+      /* animation-iteration-count: infinite;播放次数   infinite：重复播放 */
+      /* animation-direction: alternate;alternate逆向播放 */
+      /* animation-play-state: running;播放状态 running：播放 */
+}
+```
+
+
+
+------
+
+#### CSS3多列布局
+
+1. 指定列的数量
+
+   ```css
+           div{
+               column-count: 3;
+           }
+   ```
+
+2. 指定列的间距
+
+   ```css
+           div{
+               column-gap: 50px;
+           }
+   ```
+
+3. 指定列与列间的边框的宽度、风格、颜色
+
+   ```css
+           div{
+               column-rule: 5px solid red;
+           }
+   ```
+
+   

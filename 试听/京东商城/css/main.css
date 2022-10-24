@@ -1,0 +1,317 @@
+/* 主体部分 */
+.body{
+    width: 100%;
+    height: 480px;
+    margin: 0 auto;
+    /* background-color: pink; */
+    /* border: 1px solid blueviolet; */
+}
+.body .main{
+    width: 1190px;
+    height: 490px;
+    margin: 0 auto;
+}
+    /* 左侧广告 */
+.body .ad-lf .main_adv{
+    float: left;
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    left: -140px;
+    height: 480px;
+    width: 300px;
+} 
+    /* 左侧分类导航栏 */
+.main .left{
+    float: left;
+    padding: 10px 0;
+    margin-right: 10px;
+    height: 450px; 
+    width: 190px;
+    font-size: 16px;
+    line-height: 25px;
+    /* border: 1px solid black; */
+}
+.main .left a{
+    color: black;
+}
+.main .left a:hover{
+    color: red;
+}
+.main .left li{
+    text-indent: 0.5em;
+    width: 190px;
+}
+.main .left li:hover{
+    transition: all 0.5s;
+    background-color: #D9D9D9;
+}
+    /* 中间图片（轮播图） */
+.main .center{
+    /* position: absolute;
+    left: 200px; */
+    float: left;
+    height: 470px; 
+    width: 790px;
+    /* margin-left: 10px; */
+    background-color: red;
+}
+    /* 主图右边的小图片 */
+.center-rg img{
+    float: left;
+    width: 240px;
+    height: 158px;
+}
+.center-rg .rg-img1 img{
+    position: relative;
+    left: 550px;
+    top: -475px;
+}
+.center-rg .rg-img2 img{
+    position: relative;
+    left: 310px;
+    top: -317px;
+}
+.center-rg .rg-img3 img{
+    position: relative;
+    left: 70px;
+    top: -159px;
+}
+    /* 箭头部分 */
+.center1{
+    position: relative;
+}
+.imgl{
+    position: absolute;
+    top: 50%;
+    left: -5px;
+}
+.imgr{
+    position: absolute;
+    top: 50%;
+    left: 519px;
+}
+.circle{
+    width: 167px;
+    height: 20px;
+    background: rgba(255, 255, 255, .3);
+    position: absolute;
+    left: 14%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    padding-left: 8px;
+}
+.circle li{
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    border-radius: 50%;
+    float: left;
+    margin: 4px;
+    cursor: pointer;
+}
+.circle .current{
+    background-color: #f10215;
+}
+    /* 右侧用户登陆+其他功能 */
+.main .right{
+    float: left;
+    height: 470px; 
+    width: 200px;
+    font-size: 6px;
+    /* background-color: blue; */
+}
+    /* 右侧登陆 */
+.right .login{
+    height: 90px;
+    background-color: #fff;
+}
+.right .login .user-info a{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    float: left;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url(../images/img/ia_100000021.png);
+    background-position: center;
+}
+.right .not-login .login-button{
+    width: 126px;
+    height: 46px;
+    float: left;
+    margin: 0 auto;
+    padding-top: 14px;
+    padding-left: 14px;
+    /* background-color: red; */
+    line-height: 20px;
+}
+.right .not-login a{
+    color: #666;
+}
+.right .not-login a:hover{
+    color: #f10512;
+}
+.right .user-gift{
+    width: 90px;
+    height: 40px;
+}
+.right .user-gift a{
+    width: 90px;
+    height: 25px;
+    font-size: 12px;
+    line-height: 20px;
+    margin-right: 3px;
+    float: left;
+    text-align: center;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    border-radius: 13px;
+}
+.right .user-gift .NewPeople a{
+    background-color: #e1251b;
+    color: white;
+    position: relative;
+    left: 6px;
+}
+.right .user-gift .PLUS a{
+    background-color: #363634;
+    color: #e5d790;
+    position: relative;
+    top: -33px;
+    left: 100px;
+}
+.right .user-gift .PLUS a:hover{
+    transition: all 0.5s;
+    background-color:  #f10215;
+    color: white;
+}
+    /* 右侧新闻 */
+.right .news{
+    height: 154px;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+    padding: 7px 13px 0;
+    box-sizing: border-box;
+}
+.right .news .news-button span{
+    font-size: 20px;
+    font-weight: bolder;
+    margin: -60px;
+}
+.right .news-button{
+    height: 30px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
+.right .news-button a{
+    float: left;
+    height: 17px;
+    line-height: 17px;
+    color: black;
+    line-height: 30px;
+}
+.right .news-button .more{
+    float: right;
+}
+
+.right .news-info{
+    width: 174px;
+    padding-top: 15px ;
+}
+.right .news-info li{
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+.right .news-info span{
+    width: 28px;
+    height: 20px;
+    color: red;
+    font-size: 14px;
+    margin-right: 5px;
+    background-color: #FDEEED;
+}        
+.right .news-info a{
+    color: #666; 
+}
+.right .news-info a:hover{
+    color: red; 
+}
+
+    /* 右侧其他服务 */
+.right .other{
+    height: 226px;
+    background-color: white;
+    margin-top: 3px;
+}
+.right .other  li{
+    width: 63px;
+    height: 54px;
+    /* border: 1px solid #ccc; */
+    float: left;
+}
+.right .other  li a{
+    color: black;
+    display: block;
+    /* padding-top: 15px; */
+    text-align: center;
+}
+.right .other  li i{
+    display: block;
+    margin: 8px auto;
+    width: 21px;
+    height: 21px;
+}
+.right .other  li:nth-child(1) i{
+    background: url(../images/img/ia_100000022.png) no-repeat;
+    background-size: 100%;
+}
+.right .other  li:nth-child(2) i{
+    background: url(../images/img/ia_100000024.png) no-repeat;
+    background-size: 100%;
+}
+.right .other  li:nth-child(3) i{
+    background: url(../images/img/ia_100000026.png) no-repeat;
+    background-size: 100%;
+}
+.right .other  li:nth-child(4) i{
+    background: url(../images/img/ia_100000028.png) no-repeat;
+    background-size: 100%;
+}
+.right .other  li:nth-child(5) i{
+    background: url(../images/img/ia_100000030.png) no-repeat;
+    background-size: 100%;
+}
+.right .other  li:nth-child(6) i{
+    background: url(../images/img/ia_100000033.png) no-repeat;
+    background-size: 100%;
+}
+.right .other  li:nth-child(7) i{
+    background: url(../images/img/ia_100000034.png) no-repeat;
+    background-size: 100%;
+}
+.right .other  li:nth-child(8) i{
+    background: url(../images/img/ia_100000036.png) no-repeat;
+    background-size: 100%;
+}
+.right .other  li:nth-child(9) i{
+    background: url(../images/img/ia_100000039.png) no-repeat;
+    background-size: 100%;
+}
+.right .other  li:nth-child(10) i{
+    background: url(../images/img/ia_100000041.png) no-repeat;
+    background-size: 100%;
+}
+.right .other  li:nth-child(11) i{
+    background: url(../images/img/ia_100000042.png) no-repeat;
+    background-size: 100%;
+}  
+.right .other  li:nth-child(12) i{
+    background: url(../images/img/ia_100000044.png) no-repeat;
+    background-size: 100%;
+}

@@ -1,0 +1,50 @@
+/* 顶部 */
+.top{
+    width: 1190px;
+    height: 30px;
+    background-color: #fff;
+    margin: 4px auto 0;
+    line-height: 30px;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+.top .left{
+    position: relative;
+    left: 20px;
+}
+.top .home{
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin: 5px 5px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url(../images/fangzi.png);
+    background-position: center;
+}
+.top .home-title{
+    font-size: 14px;
+    margin-left: 10px;
+}
+.top .right{
+    position: relative;
+    /* left: 1100px;
+    top: -30px; */
+    margin-left: 950px;
+    margin-top: -32px;
+}
+.top .tel{
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin: 5px 5px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url(../images/dianhua.png);
+    background-position: center;
+}
+.top .tel-title{
+    font-size: 14px;
+    margin-left: 10px;
+    color: red;
+}

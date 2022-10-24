@@ -1,0 +1,122 @@
+# 总结
+
+------
+
+#### 弹性布局
+
+配置可视区
+
+ width=device-width：宽度：设备的宽度 
+
+initial-scale=1.0：初始缩放比例
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
+
+------
+
+#### 网格视图
+
+把整个100%宽度平均分为12份，使用网格布局时，可以按照12的多少份按比例布局，每份占8.33%的比例。
+
+###### 创建响应式网格视图
+
+设置所有元素的 box-sizing: border-box;保证盒子的宽度比例不变。
+
+```css
+* {box-sizing: border-box;}
+```
+
+------
+
+#### 媒体查询
+
+使用 @media 查询，@media 可以针对不同的屏幕尺寸设置不同的样式，特别是如果你需要设置设计响应式的页面。
+
+###### CSS语法
+
+如果窗口小于 500px, 背景将变为浅蓝色：
+
+```css
+        @media screen and (max-width:500px) {
+            body{
+                background-color:blue;
+            }
+        }
+```
+
+| 值     | 描述                                 |
+| ------ | ------------------------------------ |
+| all    | 用于所有设备                         |
+| print  | 用于打印机和打印预览                 |
+| screen | 用于电脑屏幕，平板电脑，智能手机等。 |
+| speech | 应用于屏幕阅读器等发声设备           |
+
+| 值            | 描述                                                 |
+| ------------- | ---------------------------------------------------- |
+| device-height | 定义输出设备的屏幕可见高度。                         |
+| device-width  | 定义输出设备的屏幕可见宽度。                         |
+| max-width     | 定义输出设备中的页面最大可见区域宽度。               |
+| min-width     | 定义输出设备中的页面最小可见区域宽度。               |
+| orientation   | 定义输出设备中的页面可见区域高度是否大于或等于宽度。 |
+
+------
+
+#### 响应式图片
+
+1. 如果 background-size 属性设置为 "contain", 背景图片将按比例自适应内容区域，图片保持其比例不变.
+
+   ```css
+   div {
+       width: 100%;
+   
+       background-image: url(图片.jpg);
+       background-repeat: no-repeat;
+       /* contain:按照原图比例缩放 */
+       background-size: contain;
+   }
+   ```
+
+2.  如果 background-size 属性设置为 "100% 100%" ，背景图片将延展覆盖整个区域。
+
+   ```css
+   div {
+       width: 100%;
+       height: 300px;
+       border: 1px solid;
+       background-image: url(图片.jpg);
+       background-size: 100% 100%;
+   }
+   ```
+
+3. 如果 background-size 属性设置为 "cover"，则会把背景图像扩展至足够大，以使背景图像完全覆盖背景区域。注意该属性保持了图片的比例因此 背景图像的某些部分无法显示在背景定位区域中。
+
+   ```css
+   div {
+       width: 100%;
+       height: 300px;
+       border: 1px solid;
+       background-image: url(图片.jpg);
+       background-size: cover;
+   }
+   ```
+
+4. 不同设备显示不同照片
+
+   ```css
+   /* 小于400px */
+   body {
+       background-image: url(图片1.jpg);
+   }
+   
+   /* 大于400px */
+   @media only screen and (min-width: 400px) {
+       body {
+           background-image: url(图片2.jpg);
+       }
+   }
+   ```
+
+   
+

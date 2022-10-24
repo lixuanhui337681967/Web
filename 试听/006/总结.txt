@@ -1,0 +1,113 @@
+# 总结
+
+#### 一、CSS背景
+
+1. 背景图片 
+
+   ```html
+   background-image : none | url (url) 
+   ```
+
+   
+
+2. 背景平铺
+
+   ```html
+   background-repeat : repeat | no-repeat | repeat-x | repeat-y 
+   ```
+
+   
+
+3. 背景位置
+
+   ```html
+   background-position : length || length，background-position : position || position 
+   ```
+
+   
+
+4. 背景附着
+
+   ```html
+   background-attachment : scroll | fixed 
+   ```
+
+   
+
+5. 背景简写
+
+   ```html
+   background:背景颜色 背景图片地址 背景平铺 背景滚动 背景位置
+   background: transparent url(image.jpg) repeat-y  scroll 50% 0 ;
+   ```
+
+   ##### 百分比计算公式
+
+   百分比计算公式：xpx=(容器宽度-背景图片的宽度)*x% 
+
+   ​							 ypx=(容器高度-背景图片的高度)*y%
+
+#### 二、CSS书写规范
+
+- 空格规范 {之前加入空格
+
+- 选择器规范 独占一行
+
+- 属性规范 另起一行
+
+  ------
+
+  
+
+#### 三、CSS三大特性
+
+1. 层叠性 就近原则
+2. 继承性 子元素可以继承父元素的样式(text-，font-，line-这些元素开头的都可以继承，以及color属性)。
+3. 优先级
+
+| ***\*继承或者\* 的贡献值\**** | ***\*0,0,0,0\**** |
+| ----------------------------- | ----------------- |
+| 每个元素（标签）贡献值为      | 0,0,0,1           |
+| 每个类，伪类贡献值为          | 0,0,1,0           |
+| 每个ID贡献值为                | 0,1,0,0           |
+| 每个行内样式贡献值            | 1,0,0,0           |
+| 每个!important贡献值 重要的   | ∞ 无穷大          |
+
+#### 四、盒子模型
+
+1. 内容
+2. 内边距(padding)
+3. 边框(border)
+4. 外边距(margin)
+
+##### 语法
+
+语法：border : border-width || border-style || border-color 
+
+##### style常用属性值
+
+none：没有边框即忽略所有边框的宽度（默认值）
+
+solid：边框为单实线(最为常用的)
+
+dashed：边框为虚线  
+
+dotted：边框为点线
+
+double：边框为双实线
+
+各个边均可单独调整宽度width、样式style、颜色color
+
+##### 书写方式
+
+(X : top || right || down || left)
+
+border-X-width:宽度;
+
+border-X-style:样式; 
+
+border-X-color:颜色;
+
+border-X:宽度 样式 颜色;
+
+##### 奇数个方向时样式规则 下=上 左=右

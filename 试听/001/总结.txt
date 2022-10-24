@@ -1,0 +1,29 @@
+# **Web前端笔记Day01**
+
+------
+
+## 		第一节课
+
+1. 安装谷歌浏览器和Vscode以及插件
+
+2. 掌握Vscode的基础使用
+
+3. 创建h5基本结构(!回车)
+
+   ```html
+   <!DOCTYPE html>
+   <html lang="en">
+       <head>
+           <meta charset="UTF-8">
+           <meta http-equiv="X-UA-Compatible" content="IE=edge">
+           <meta name="viewport" content="width=device-width, initial-scale=1.0">
+           <title>Document</title>
+       </head>
+       <body>
+       </body>
+   </html>
+   ```
+
+4. 了解web标准构成
+
+5. 作业

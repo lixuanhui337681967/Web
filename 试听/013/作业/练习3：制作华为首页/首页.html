@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .box{
+            width: 1190px;
+            margin: 0 auto;
+        }
+        li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        /* 顶部 */
+        .top{
+            width: 100%;
+            background-color: #5D5D58;
+            display: flex;
+            height: 40px;
+            align-items: center;
+        }
+        .top a{
+            padding: 20px;
+            color: #fff;
+        }
+        .top a:hover{
+            background-color: #fff;
+            color: black;
+        }
+        /* 中部 */
+        .center{
+            display: flex;
+            height: 70px;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .hidden{
+            display: none;
+        }
+        /* 底部 */
+        .bottom{
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .bottom .img1,.img2,.img3{
+            width: 380px;
+        }
+        .bottom img{
+            width: 100%;
+        }
+        .bold{
+            font-size: 18px;
+            font-weight: bold;
+        }
+        p{
+            font-size: 14px;
+            line-height: 24px;
+        }
+        @media screen and (max-width: 900px) {
+            .box{
+                width: 450px;
+                margin: 0 auto;
+            }
+            /* 顶部 */
+            .top{
+                display: none;
+            }
+            /* 中部 */
+            .log{
+                display: none;
+            }
+            .hidden{
+                position: relative;
+                display: block;
+                padding-right: 20px;
+            }
+            .show{
+                position: absolute;
+                right: 23px;
+                top: 43px;
+                width: 150px;
+                background-color: #FFFFFF;
+                box-shadow: -4px 5px 5px 0px #ccc;
+                display: none;
+            }
+            .show a{
+                display: block;
+                width: 120px;
+                margin: 0 auto;
+                padding: 10px 0;
+                text-align: center;
+            }
+            .hidden:hover .show{
+                display: block;
+            }
+            /* 底部文字 */
+            .bottom{
+                flex-direction: column;
+            }
+            .bottom .img1,.img2,.img3{
+                margin-bottom: 20px;
+                width: 440px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <!-- 顶部导航栏 -->
+        <div class="top">
+            <div class="hidden1">
+                <a href="#">首页</a>
+                <a href="#">个人与家庭用户</a>
+                <a href="#">企业用户</a>
+                <a href="#">运营商用户</a>
+            </div>
+        </div>
+        <!-- 中部 -->
+        <div class="center">
+            <a href="#"><li><img src="images/logo.png" alt=""></li></a>
+            <img class="log" src="images/top-lan.jpg" alt="">
+            <div class="hidden">
+                <input type="text" name="" id="">
+                <img src="images/menu.png" alt="">
+                <div class="show">
+                    <a href="#">首页</a>
+                    <a href="#">个人与家庭用户</a>
+                    <a href="#">企业用户</a>
+                    <a href="#">运营商用户</a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <!-- 底部图片+文字 -->
+        <div class="bottom">
+            <div class="img1">
+                <img src="images/huawei01.jpg" alt="">
+                <div class="bold">孟加拉bKash：移动支付带来便利生活</div>
+                <p>bKash作为BRAC银行的合资子公司，为孟加拉人提供移动金融服务。bKash简化货币从城市转移到农村的方式，为孟加拉国经济发展做出关键贡献，并持续改变当地人的生活方式。</p>
+            </div>
+            <div class="img2">
+                <img src="images/huawei02.jpg" alt="">
+                <div class="bold">光大银行T系统“瘦身”记</div>
+                <p>近几十年，金融业成为信息技术和网络技术发展的最大受益者之一。上世纪90年代末，金融业充分利用信息科技的进步，带来各类金融产品的升级和服务、管理手段的提高，实现了金融业的"“数据大集中”，也就是业内所说的”大集中
+                    1.0“。近几年，随着金融行业业务和云计算技术的突飞猛进，金融机构也正向“大集中20”模式悄然转变。</p>
+            </div>
+            <div class="img3">
+                <img src="images/huawei03.jpg" alt="">
+                <div class="bold">哈马德机场：轻松管理海量监控数据</div>
+                <p>卡塔尔位于欧亚大陆中部，理所当然地成为众多旅行和商务人士的中转地。位于卡塔尔首都多哈的哈马德机场，占地2200公顷，在2014年4月30日正式启用，年均客流量为2900万人次，预计每年最多可处理5千万客流、32万架次航班，以及200万吨货物。</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

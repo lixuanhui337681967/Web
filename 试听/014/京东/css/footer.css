@@ -1,0 +1,169 @@
+        /* 底部 */
+        .footer{
+            width: 1190px;
+            height: 590px;
+            margin: 0 auto;
+            /* background-color: pink; */
+        }
+            /* 宣传标语 */
+        .info{
+            padding: 30px 0; 
+            border-bottom: 1px solid white;
+            overflow: hidden;
+        }
+        .info ul li {
+            width: 297px;
+            height: 43px;
+            position: relative;
+            line-height: 43px;
+            float: left;
+        }
+        .info li span {
+            position: absolute;
+            top: 0;
+            left: 38px;
+            width: 38px;
+            height: 43px;
+            background: url(../images/ia_100000098.png) no-repeat;
+        }
+        .info li:nth-child(1) span{
+            background-position: 0 -190px;
+        }
+        .info li:nth-child(2) span{
+            background-position: -40px -190px;
+        }
+        .info li:nth-child(3) span{
+            background-position: -80px -190px;
+        }
+        .info li:nth-child(4) span{
+            background-position: -122px -190px;
+        }
+        .info li p {
+            font-weight: bold;
+            margin-left: 82px;
+        }
+            /* 服务提供 */
+        .service {
+            height: 230px;
+            border-bottom: 1px solid #DEDEDE;
+            padding-top: 25px;
+            box-sizing: border-box;
+        }
+        .service ul li{
+            display: block;
+            list-style: none;
+            height: 30px;
+            font-size: 14px;
+            color: #666;
+        }
+        .service .service1{
+            width: 192px;
+            float: left;
+            margin-left: 10px;
+        }
+        .service span{
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .service .service1 a{
+            color: #666;
+        }
+        .service-right{
+            width: 250px;
+            height: 200px;
+            float: left;
+            margin-top: -210px;
+            margin-left: 940px;
+            color: gray;
+        }
+        .service-right h1{
+            text-align: center;
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: grey;
+        }
+        .service-right a{
+            text-align: left;
+            margin-left: 168px;
+            color: gray;
+        }
+            /* 联系方式 */
+        .contact{
+            padding-top: 20px;
+            text-align: center;
+            color: #666;
+            font-size: 12px;
+        }
+        .contact a{
+            font-weight: bold;
+            color: #666;
+        }
+        .contact span{
+            margin: 0 10px;
+        }
+        .contact div{
+            margin-top:20px;
+        }
+        .contact div p{
+            line-height: 22px;
+        }
+        .copyright a{
+            color: #666;
+        }   
+        .language-icon1{
+            display: inline-block;
+            width: 14px;
+            height: 12px;
+            background: url(../images/ia_100000065.png) no-repeat;
+            background-position: 0  0;
+        } 
+        .language-icon2{
+            display: inline-block;
+            width: 14px;
+            height: 12px;
+            background: url(../images/ia_100000065.png) no-repeat;
+            background-position: -20px  0;        } 
+        .language-icon3{
+            display: inline-block;
+            width: 14px;
+            height: 12px;
+            background: url(../images/ia_100000065.png) no-repeat;
+            background-position: 0  -12px;        } 
+        .language-icon4{
+            display: inline-block;
+            width: 14px;
+            height: 12px;
+            background: url(../images/ia_100000065.png) no-repeat;
+            background-position: -40px  0;        } 
+        .language-icon5{
+            display: inline-block;
+            width: 14px;
+            height: 12px;
+            background: url(../images/ia_100000065.png) no-repeat;
+            background-position: -20px  -12px;       
+        } 
+        .footer-icon a{
+            display: inline-block;
+            width: 104px;
+            height: 32px;
+            background: url(../images/ia_100000099.png) no-repeat;
+            margin: 30px 4px 0;
+        }
+        .footer-icon a:nth-child(1){
+            background-position: -104px  0;
+        }
+        .footer-icon a:nth-child(2){
+            background-position: 0  -32px;
+        }
+        .footer-icon a:nth-child(3){
+            background-position: -104px -32px;
+        }
+        .footer-icon a:nth-child(4){
+            background-position: -0  -64px;
+        }
+        .footer-icon a:nth-child(5){
+            background-position: -104px  -64px;
+        }
+        .footer-icon a:nth-child(6){
+            background-position: -0  -96px;
+        }

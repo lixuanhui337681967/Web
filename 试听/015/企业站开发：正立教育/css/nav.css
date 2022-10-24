@@ -1,0 +1,34 @@
+/* logo和nav */
+.nav{
+    width: 1190px;
+    height: 80px;
+    background-color: #fff;            
+    margin: 0 auto;
+    line-height: 80px;
+}
+.nav .nav-logo{
+    width: 226px;
+    height: 50px;
+    float: left;
+    /* margin: 15px; */
+    margin: 15px 0px 15px 20px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url(../images/logo.png);
+    background-position: center;
+}
+.nav .nav-ul{
+    float: left;
+    font-size: 16px;
+    position: relative;
+    left: 420px;
+}
+.nav .nav-ul li{
+    margin-right: 30px;
+}
+.nav .nav-ul a{
+    color: black;
+}
+.nav .nav-ul a:hover{
+    color: red;
+}

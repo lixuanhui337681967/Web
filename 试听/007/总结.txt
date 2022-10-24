@@ -1,0 +1,111 @@
+# 总结
+
+#### 盒子模型的外边距margin
+
+1. 外边距margin
+
+2. 居中
+
+   ```html
+   width = auto  （块级元素）
+   ```
+
+   
+
+3. 内容居中与盒子居中的区别
+
+   ​	文字水平居中是text-align: center
+
+   ​	盒子水平居中左右margin改为 auto 
+
+4. 清除默认内外边距
+
+   ```css
+   * {
+      padding:0;         /* 清除内边距 */
+      margin:0;          /* 清除外边距 */
+   }
+   ```
+
+   
+
+5. 合并相邻元素块垂直边距
+
+   ```
+   1、可以为父元素定义1像素的上边框或上内边距。
+   2、可以为父元素添加overflow:hidden。
+   ```
+
+   
+
+   
+
+#### 浮动
+
+1. 标准流
+
+2. 浮动
+
+3. 分类
+
+   选择器float:属性值
+
+   | ***\*属性值\**** | ***\*描述\****       |
+   | ---------------- | -------------------- |
+   | left             | 元素向左浮动         |
+   | right            | 元素向右浮动         |
+   | none             | 元素不浮动（默认值） |
+
+4. 特征
+
+   浮动脱离标准流，不占位置，会影响标准流。浮动只有左右浮动。
+
+5. 清除浮动
+
+   选择器clear:属性值
+
+   | ***\*属性值\**** | ***\*描述\****                             |
+   | ---------------- | ------------------------------------------ |
+   | left             | 不允许左侧有浮动元素（清除左侧浮动的影响） |
+   | right            | 不允许右侧有浮动元素（清除右侧浮动的影响） |
+   | both             | 同时清除左右两侧浮动的影响                 |
+
+   - 额外标签法
+
+   ```html
+   <div style=”clear:both”></div>
+   ```
+
+   或则其他标签br等亦可
+
+   - 父级添加overflow属性方法
+
+      overflow为 hidden|auto|scroll
+
+   - 伪元素清除浮动
+
+   ```css
+   .clearfix:after {  
+   content: "."; 
+   display: block; 
+   height: 0; 
+   clear: both; 
+   visibility: hidden;  
+   }
+   ```
+
+   - 双为元素清除浮动
+
+```css
+.clearfix:before,.clearfix:after { 
+  content:"";
+  display:table;  /* 这句话可以出发BFC BFC可以清除浮动,BFC我们后面讲 */
+}
+.clearfix:after {
+ clear:both;
+}
+.clearfix {
+  *zoom:1;
+}
+```
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div > 
+
+        <form action="/Day03/success.html" method="get"  enctype="multipart/form-data">
+       
+            <label for="username">所在地区:&nbsp;&nbsp;&nbsp;&nbsp;</label><input name="area" placeholder="北京"><br><br>
+            用户名: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" name="pwd"><br><br>
+            密码:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" ><br><br>
+            年龄:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="date"><br><br>
+            地址:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" list="list1">
+                        <datalist id="list1">
+                            <option value="北京"></option>
+                            <option value="石家庄"></option>
+                            <option value="保定"></option>
+                        </datalist><br><br>
+            性别: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="sex" value="男" checked>&nbsp;&nbsp;男&nbsp;&nbsp;&nbsp;<input type="radio" name="sex" value="女" >女&nbsp;&nbsp;&nbsp;<input type="radio" name="sex" value="人妖" >人妖  <br><br> 喜欢的类型:
+                    <input type="checkbox" name="aihao" >妩媚&nbsp;
+                    <input type="checkbox" name="aihao" checked>气质&nbsp;
+                    <input type="checkbox" name="aihao" >小鲜肉&nbsp;
+                    <input type="checkbox" name="aihao" >鹿晗<br><br>
+            上传头像: &nbsp;&nbsp;<input type="file" name="file" ><br><br>
+            给我留言: <textarea name="beizhu" id="wenbenyu" cols="30" rows="10" ></textarea><br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; <input type="submit" value="提交按钮"> 
+            &nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" value="重置"><br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; <input type="image" src="image/个人信息注册表/btn.png" alt="免费注册">
+        </form>
+    </div>
+</body>
+</html>

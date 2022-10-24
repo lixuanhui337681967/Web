@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+      function car(weight,color,plate){
+            var person = new Object();
+            person.weight=weight;
+            person.color=color;
+            person.plate=plate;
+    
+            person.fn1=function(){
+              console.log('载人');
+            }
+            person.fn2=function(){
+              console.log('拉货');
+            }
+            return person
+          }
+        var a =car('1.4t','红色','AXXXXX');
+        console.log(a);
+        a.fn1();
+        a.fn2();
+    </script>
+</head>
+<body> 
+</body>
+</html>

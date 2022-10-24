@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>照片墙</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .body{
+            width: 1400px;
+            height: 800px;
+            margin: 0 auto;
+            /* border: 1px solid; */
+        }
+        .body img{
+            width: 200px;
+            padding: 10px 10px 15px;
+            background: white;
+            border: 1px solid #ddd;
+            box-shadow: 2px 2px 3px #666;
+            position: absolute;
+            /* z-index: 1; */
+        }
+        .body img:hover{
+            /* 过渡时间 */
+            transition-duration: 2s;
+            box-shadow: 15px 15px 20px #666;
+            /* 摆正 变大2倍  */
+            transform:rotate(0deg) scale(2);
+            -webkit-transform:rotate(0deg) scale(2);
+            z-index: 1000;
+        }
+        /* 位置太麻烦了。。。 */
+        .pic1{
+            left: 400px;
+            top: 290px;
+            /* 顺时针旋转 */
+            transform:rotate(-20deg);
+            -webkit-transform:rotate(-20deg);
+            z-index: 3;
+        }
+        .pic2{
+            left: 200px;
+            top: 10px;
+            /* 顺时针旋转 */
+            transform:rotate(-20deg);
+            -webkit-transform:rotate(-20deg);
+        }
+        .pic3{
+            left: 220px;
+            top: 80px;
+            /* 顺时针旋转 */
+            transform:rotate(5deg);
+            -webkit-transform:rotate(5deg);
+        }
+        .pic4{
+            left: 100px;
+            top: 300px;
+            /* 顺时针旋转 */
+            transform:rotate(-10deg);
+            -webkit-transform:rotate(-10deg);
+        }
+        .pic5{
+            left: 200px;
+            top: 300px;
+            /* 顺时针旋转 */
+            transform:rotate(-5deg);
+            -webkit-transform:rotate(-5deg);
+        }
+        .pic6{
+            left: 270px;
+            top: 240px;
+            /* 顺时针旋转 */
+            transform:rotate(34deg);
+            -webkit-transform:rotate(34deg);
+            z-index: 2;
+        }
+        .pic7{
+            left: 300px;
+            top: 100px;
+            /* 顺时针旋转 */
+            transform:rotate(-30deg);
+            -webkit-transform:rotate(-30deg);
+            z-index: 1;
+        }
+        .pic8{
+            left: 500px;
+            top: 300px;
+            /* 顺时针旋转 */
+            transform:rotate(-5deg);
+            -webkit-transform:rotate(-5deg);
+        }
+        .pic9{
+            left: 600px;
+            top: 100px;
+            /* 顺时针旋转 */
+            transform:rotate(-5deg);
+            -webkit-transform:rotate(-5deg);
+        }
+        .pic10{
+            left: 300px;
+            top: 600px;
+            /* 顺时针旋转 */
+            transform:rotate(-5deg);
+            -webkit-transform:rotate(-5deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="body">
+        <img class="pic1"  src="image/1.jpg" >
+        <img class="pic2"  src="image/2.jpg" >
+        <img class="pic3"  src="image/3.jpg" >
+        <img class="pic4"  src="image/4.jpg" >
+        <img class="pic5"  src="image/5.jpg" >
+        <img class="pic6"  src="image/6.jpg" >
+        <img class="pic7"  src="image/7.jpg" >
+        <img class="pic8"  src="image/8.jpg" >
+        <img class="pic9"  src="image/9.jpg" >
+        <img class="pic10" src="image/10.jpg" >
+    </div>
+</body>
+</html>

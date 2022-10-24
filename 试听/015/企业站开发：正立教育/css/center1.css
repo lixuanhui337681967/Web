@@ -1,0 +1,86 @@
+/* 权威认证 */
+.center1{
+    width: 1190px;
+    height: 150px;
+    background-color: #fff;
+    margin: 16px auto;
+}
+.center1 .c1-lf{
+    float: left;
+    width: 385px;
+    height: 150px;
+    margin-left: 8px;
+    /* background-color: pink; */
+}
+.center1 .c1-lf div{
+    width: 70px;
+    height: 70px;
+    float: left;
+    margin: 40px 20px 40px 40px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url(../images/img1.png);
+    background-position: center;
+}
+.center1 .c1-lf p:nth-child(2){
+    margin-top: 44px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+.center1 .c1-lf p:nth-child(3){
+    font-size: 14px;
+}
+.center1 .c1-ct{
+    float: left;
+    width: 384px;
+    height: 150px;
+    /* background-color: pink; */
+}
+.center1 .c1-ct div{
+    width: 70px;
+    height: 70px;
+    float: left;
+    margin: 40px 20px 40px 40px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url(../images/img2.png);
+    background-position: center;
+}
+.center1 .c1-ct p:nth-child(2){
+    margin-top: 44px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+.center1 .c1-ct p:nth-child(3){
+    font-size: 14px;
+}
+.center1 .c1-rg{
+    float: left;
+    width: 381px;
+    height: 150px;
+    /* background-color: pink; */
+}
+.center1 .c1-rg div{
+    width: 70px;
+    height: 70px;
+    float: left;
+    margin: 40px 20px 40px 40px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url(../images/img3.png);
+    background-position: center;
+}
+.center1 .c1-rg p:nth-child(2){
+    margin-top: 44px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+.center1 .c1-rg p:nth-child(3){
+    font-size: 14px;
+}
+.center1 .fgx{
+    margin: 25px 4px;
+    height: 100px;
+    float: left;
+    border: 1px solid black;
+}

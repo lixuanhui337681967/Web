@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>导航</title>
+    <style>
+        .div1{
+            width: 80%;
+            height: 300px;
+            margin: 0 auto;
+            border: 1px solid;
+        }
+        .div2{
+            font-size: 40px;
+            font-weight: bolder;
+            line-height: 200px;
+            height: 200px;
+            text-align: center;
+            border: 1px solid;
+        }
+        .caidan li{
+            height: 40px;
+            list-style: none;
+            background-color: white;
+            color: black;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 8px;
+            float: left;
+        }
+        .caidan{
+            background-color: black;
+            height: 100px;
+            border: 1px solid;
+        }
+
+        @media screen  and (max-width:1023px) {
+            .div1{
+            height: 600px;
+            }
+            .caidan{
+                height: 400px;
+            }
+            .caidan li{
+                width: 90%;
+                margin: 16px 10px;
+            }
+        }
+        @media screen  and (min-width:1024px){
+            .div1{
+                height: 300px;
+            }
+            .caidan{
+                height: 100px;
+            }
+            .caidan li{
+                width: 16%;
+                margin: 14px 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <div class="div2">响应式导航</div>
+        <div class="caidan">
+            <ul>
+                <li>首页</li>
+                <li>产品介绍</li>
+                <li>个人中心</li>
+                <li>公司地址</li>
+                <li>联系我们</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+/* 脚部 */
+.footer{
+    float: left;
+    width: 100%;
+    /* background-color: blue; */
+    margin: 50px auto;
+}
+/* 上面的特色xx */
+.footer .footer_top{
+    height: 120px;
+    width: 500px;
+    margin: 0 auto;
+}
+.footer .plastic-logo{
+    width: 290px;
+    height: 60px;
+    background-image: url(../images/Plastic.png);
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+.footer .Bolder{
+    font-size: 36px;
+    font-weight: bolder;
+    float: left;
+    margin-left: 140px;
+    margin-top: -36px;
+}
+.footer .fgx1{
+    width: 40px;
+    float: left;
+    /* margin-top: 0px; */
+    margin-left: 230px;
+    border-bottom: 5px solid red;
+}
+.footer .title{
+    float: left;
+    color: #666;
+    margin-left: 48px;
+    /* margin-top: 0px; */
+}
+/* css轮播图 */
+.footer .lunbotu{
+    width: 1290px;
+    height: 400px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+.lunbotu .img{
+    width: 3600px;
+    height: 400px;
+    animation: move 5s linear infinite;
+}
+.lunbotu img {
+    float: left;
+    width: 600px;
+    height: 400px;
+}
+@keyframes move {
+    to{
+        transform: translateX(-1800px);
+    }
+}
+/* 悬浮暂停 */
+.lunbotu .img:hover{
+    animation-play-state:paused;
+}
+/* 轮播图媒体查询 */
+@media screen and (max-width: 768px) {
+    .footer .lunbotu{
+        width: 600px;
+        height: 400px;
+    }
+}

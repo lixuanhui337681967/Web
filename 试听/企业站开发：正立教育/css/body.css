@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    /* border-bottom: 1px solid red; */
+    background-color: #EAEAEA;            
+    /* background-color: #EAEAEA; */
+}
+div{
+    display: block;
+}
+li{
+    display: inline-block;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.box{
+    margin: 0 auto;
+    width: 1300px;
+    height: auto;
+    background-color: #fff;            
+}

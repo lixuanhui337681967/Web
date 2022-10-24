@@ -1,0 +1,59 @@
+/* 顶部 */
+.header{
+    height: 750px;
+    width: 100%;
+    background-image: url(../images/indexBanner.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+/* 左侧logo */
+.header .h_logo{
+    float: left;
+    margin-left: 100px;
+    margin-top: 40px;
+}
+/* 右侧导航栏 */
+.header .h_nav_r{
+    float: right;
+    /* margin-left: 800px; */
+    margin-top: 40px;
+    display: block;
+}
+.header .h_nav_r li{
+    padding:0 20px;
+}
+.header .h_nav_r li a{
+    color: #757A82;
+    font-size: 20px;
+    padding-bottom: 4px;
+}
+.header .h_nav_r li a:hover{
+    color: white;
+    border-bottom: 3px solid white;
+}
+.header .select{
+    display: none;
+}
+/*媒体查询*/
+@media screen and (max-width: 768px){
+    .header{
+        height: 300px;
+        background: url(../images/indexBnnerPH.png) no-repeat 0px 40px;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;    
+    }
+    .header .h_nav_r{
+        display: none;
+    }
+    .header .h_logo{
+        position: absolute;
+        left: -90px;
+        top: -36px;
+    }
+    .header .select{
+        display: block !important;
+        position: absolute;
+        top: 8px;
+        right: 10px;
+    }
+}

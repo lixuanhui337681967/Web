@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旋转按钮</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .body{
+            width: 600px;
+            height: 200px;
+            border: 1px solid blue
+        }
+        .body p{
+            font-size: 30px;
+            font-weight: bolder;
+            margin-bottom: 20px;
+        }
+        .body img{
+            width: 100px;
+            margin: 0 5px;
+        }
+        .body img:hover{
+            /* 过渡时间 */
+            transition-duration: 2s;
+            /* 摆正 变大1.2倍  */
+            transform:rotate(360deg) scale(1.2);
+            -webkit-transform:rotate(360deg) scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="body">
+        <p>顺时针旋转360度放大1.2倍</p>
+        <img class="pic1"  src="images/rss.png" >
+        <img class="pic2"  src="images/delicious.png" >
+        <img class="pic3"  src="images/facebook.png" >
+        <img class="pic4"  src="images/twitter.png" >
+        <img class="pic5"  src="images/yahoo.png" >
+    </div>
+</body>
+</html>

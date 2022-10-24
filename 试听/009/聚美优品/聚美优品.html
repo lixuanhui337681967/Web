@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聚美优品</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .body{
+            width: 1800px;
+            /* border: 2px solid red; */
+            margin: 0px auto;
+        }
+        /* 顶部logo */
+        .head{
+            /* border: 1px solid blue; */
+            /* 2.父级添加overflow属性方法,从而把父级边框撑开 */
+            overflow: hidden;
+        }
+        .logo{
+            margin-top: 30px;
+            margin-bottom: 30px;
+            margin-left: 300px;
+            width: 20%;
+            height: 20%;
+            /* border: 1px solid red; */
+            float: left;
+        }
+        .logo-r{
+            margin-top: 54px;
+            padding-right: 300px;
+            width: 30%;
+            height: 20%;
+            /* border: 1px solid red; */
+            float: right;
+        }
+        .logo1{
+            width: 125px;
+            height: 32px;
+            /* border: 1px solid blue; */
+            background-image: url(images/header_corn_new_v2.png);
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            float: left;
+        }
+        .logo2{
+            width: 125px;
+            height: 32px;
+            /* border: 1px solid blue; */
+            background-image: url(images/header_corn_new_v2.png);
+            background-repeat: no-repeat;
+            background-position: 0 -32px;
+            float: left;
+        }
+        .logo3{
+            width: 125px;
+            height: 32px;
+            /* border: 1px solid blue; */
+            background-image: url(images/header_corn_new_v2.png);
+            background-repeat: no-repeat;
+            background-position: 0 -64px;
+            float: left;
+        }
+        /* 左侧广告图和右侧登陆 */
+        .top{
+            overflow: hidden;
+        }
+        .z-logo{
+            margin-top: 30px;
+            margin-left: 302px;
+            width: 320px;
+            height: 360px;
+            /* border: 1px solid red; */
+            float: left;
+        }
+        .table{
+            margin-top: 30px;
+            margin-left: 334px;
+            margin-bottom: 30px;
+            width: 540px;
+            height: 410px;
+            /* border: 1px solid blue; */
+            float: left;
+            box-shadow: -4px 4px 4px #ccc;
+        }
+        .account{
+            margin-left: 10px;
+            color: #FB1B10;
+            font-size: 32px;
+        }
+        .span{
+            margin-left: 120px;
+            font-size: 14px;
+            color: #D8D7D8;
+        }
+        .loginin{
+            font-size: 14px;
+            color: #FA386D;
+        }
+        .phonenumber{
+            margin-left: 10px;
+            margin-top: 20px;
+            width: 350px;
+            height: 40px;
+        }
+        .phonecode{
+            margin-left: 10px;
+            margin-top: 20px;
+            width: 165px;
+            height: 40px;
+        }
+        .getphonecode{
+            margin-left: 10px;
+            margin-top: 20px;
+            width: 170px;
+            height: 44px;
+            color: #004DF6;
+            border: 0;
+            background-color: #DCDCDC;
+        }
+        .password{
+            margin-left: 10px;
+            margin-top: 20px;
+            width: 350px;
+            height: 40px;
+        }
+        .re-password{
+            margin-left: 10px;
+            margin-top: 20px;
+            width: 350px;
+            height: 40px;
+        }
+        .registe{
+            color: white;
+            background-color: #F8296D;
+            border: 0;
+            margin-left: 10px;
+            margin-top: 20px;
+            width: 350px;
+            height: 40px;
+        }
+        .user{
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+        .user a{
+            color: #F93EAF;
+        }
+        /* 中间文字提示 */
+        .center{
+            text-align: center;
+            padding-top: 30px;
+            margin: 0 auto;
+            height: 10%;
+            /* border: 1px solid red; */
+        }
+        /* 底部图片 */
+        .bottom{
+            margin-top: 30px;
+            margin-left: 430px;
+            height: 40%;
+            /* border: 1px solid orange; */
+        }
+        .b-logo1{
+            width: 160px;
+            height: 50px;
+            /* border: 1px solid orange; */
+            background-image: url(images/header_corn_new_v2.png);
+            background-repeat: no-repeat;
+            background-position: 12px -168px;
+            float: left;
+        }
+        .b-logo2{
+            width: 160px;
+            height: 50px;
+            /* border: 1px solid orange; */
+            background-image: url(images/header_corn_new_v2.png);
+            background-repeat: no-repeat;
+            background-position: 12px -222px;
+            float: left;
+        }
+        .b-logo3{
+            width: 160px;            
+            height: 50px;
+            /* border: 1px solid orange; */
+            background-image: url(images/header_corn_new_v2.png);
+            background-repeat: no-repeat;
+            background-position: 12px -270px;
+            float: left;
+        }
+        .b-logo4{
+            width: 160px;            
+            height: 50px;
+            /* border: 1px solid orange; */
+            background-image: url(images/header_corn_new_v2.png);
+            background-repeat: no-repeat;
+            background-position: 12px -322px;
+            float: left;
+        }
+        .b-logo5{
+            width: 160px;
+            height: 50px;
+            /* border: 1px solid orange; */
+            background-image: url(images/header_corn_new_v2.png);
+            background-repeat: no-repeat;
+            background-position: 12px -372px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="body">
+            <!-- 头部 -->
+            <div class="head">
+                <div class="logo">
+                    <img src="images/logo.jpg" alt="logo">
+                </div>
+                <div class="logo-r"> 
+                    <div class="logo1"></div>
+                    <div class="logo2"></div>
+                    <div class="logo3"></div>
+                 </div>
+            </div>
+            <!-- 左侧图和注册 -->
+            <div class="top">
+                <div class="z-logo">
+                    <img src="images/loginPic.jpg" alt="z-logo">
+                </div>
+                <div class="table">
+                    <form action="https://www.baidu.com/" method="get">
+                        <p class="account">用户注册<span class="span">已有帐号<a href="#" class="loginin">在此登录</a></span></p>
+                        <input type="text" class="phonenumber" placeholder="手机号">
+                        <input type="text" class="phonecode" placeholder="短信验证码">
+                        <input type="button" class="getphonecode"  value="获取短信校验" >
+                        <input type="password" class="password" placeholder="密码">
+                        <input type="password" class="re-password" placeholder="重复密码">
+                        <input type="submit" class="registe" value="同意协议并注册">
+                        <div class="user">
+                            <a href="#">《聚美优品用户协议》</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- 信息 -->
+            <div class="center"> 
+                <p>Copyright&copy;2010-2015北京创锐文化传媒有限公司Jumei.com保留- -切权利。客服热线: 400-123-8888</p>
+                <p>京公网安备11010102001226号|京ICP证111033号I食品流通许可证SP1101051110165515 (1-1) |营业执照</p>
+            </div>
+            <!-- 底部图片 -->
+            <div class="bottom">
+                <div class="b-logo1"></div>
+                <div class="b-logo2"></div>
+                <div class="b-logo3"></div>
+                <div class="b-logo4"></div>
+                <div class="b-logo5"></div>
+            </div>
+    </div>
+</body>
+</html>

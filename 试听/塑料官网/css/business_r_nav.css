@@ -1,0 +1,25 @@
+.r_nav{
+	/*悬浮菜单样式*/
+	position: fixed;
+	left: 96%;
+	/* margin-left: 0; */
+	top: 50%;
+}
+.r_nav .item{
+	/*悬浮菜单内容样式*/
+	width: 54px;
+	height: 60px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 22px;
+    background-color: red;
+    margin-top: 2px;
+}
+.r_nav .item a{
+    color: white;
+}
+@media screen and (max-width: 768px) {
+    .r_nav{
+		display: none;
+	}
+}

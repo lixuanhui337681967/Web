@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>布局练习</title>
+    <style>
+        /* 大div */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .main{
+            background: url("image/bg1.jpg");
+            margin: 0 auto;
+            width: 1800px;
+            height: 1200px;
+        }
+        /* 顶部标题 */
+        .title{
+            height: 150px;
+            color: white;
+            line-height: 150px;
+            text-align: center;
+            /* border: 1px solid black; */
+        }
+        .title span{
+            color: #FF5C39;
+            font-style: italic;
+        }
+        .sub_title{
+            width: 300px;
+            height: 100px;
+            text-align: center;
+            margin: auto 0;
+        }
+        /* 左侧导航栏 */
+        .left{
+            float: left;
+            width: 300px;
+            height: 900px;
+            /* border: 1px solid blue; */
+        }
+        .left a{
+            text-decoration: none;
+            color: #FEB6B2;
+        }
+        li{
+            border: 1px solid #EEE8AA;
+            width: 300px;
+            height: 110px;
+            list-style: none;
+            text-align: center;
+            line-height: 100px;
+            font-size: 40px;
+            font-family: "楷体";
+        }
+        /* 右侧简介 */
+        .right{
+            float: right;
+            width: 300px;
+            height: 900px;
+            /* border: 1px solid blue; */
+        }
+        h2{
+            color: white;
+            line-height: 100px;
+            text-align: center;
+            border-bottom: 6px solid #9C7EBA;
+        }
+        .right p{
+            width: 300px;
+            height: 670px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            font-size: 24px;
+            color: white;
+            border-bottom: 6px solid #9C7EBA;
+            overflow-y: scroll;
+        }
+        .right a{
+            font-size: 34px;
+        }
+        /* 中间视频 */
+        .video{
+            width: 1200px;
+            height: 900px;
+            position: absolute;
+            left: 388px;
+            /* border: 1px solid red; */
+        }
+        .shipin{
+            position: absolute;
+            left: 320px;
+            top: 128px;
+        }
+        /* 底部介绍 */
+        .gx{
+            width: 1800px;
+            height: 150px;
+            /* border: 1px solid black; */
+            position: absolute;
+            top: 1052px;
+            font-size: 20px;
+            color: white;
+            line-height: 150px;
+            text-align: center;
+            font-weight: bolder;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="title">
+            <h1>电影频道之<span>从你的全世界路过</span></h1>  
+        </div>
+        <div class="left">
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">后来的我们</a></li>
+                <li><a href="#">你好,李焕英</a></li>
+                <li><a href="#">老爸老妈浪漫</a></li>
+                <li><a href="#">唐人街探案</a></li>
+                <li><a href="#">复仇者联盟4</a></li>
+                <li><a href="#">红海行动</a></li>
+                <li><a href="#">白蛇缘起</a></li>
+            </ul>
+        </div>
+        <div class="video">
+            <div class="shipin">
+                <video controls width="1152" height="648">
+                    <source src="media/Mizuha.webm" type="video/Webm">
+                </video>
+            </div>
+        </div>
+        <div class="right">
+            <h2>影片简介</h2>
+            <p>
+                《从你的全世界路过》是由北京光线影业有限公司出品的爱情片
+                由张一白执导，邓超领衔主演，白百何特约出演
+                杨洋、张天爱、岳云鹏、杜鹃、柳岩领衔主演
+                当然还有相关的配音
+                该片改编自张嘉佳同名小说，讲述了DJ陈末和一群朋友的都市情感故事(
+                该片于2016年9月29日在中国内地上映>>>
+                陈末(邓超饰)被称为全城最贱，每天和王牌DJ小容(杜鹃饰)针锋相对，谁,《从你的全世界路过》是由北京光线影业有限公司出品的爱情片
+                由张一白执导，邓超领衔主演，白百何特约出演
+                杨洋、张天爱、岳云鹏、杜鹃、柳岩领衔主演
+                当然还有相关的配音
+                该片改编自张嘉佳同名小说，讲述了DJ陈末和一群朋友的都市情感故事(
+                该片于2016年9月29日在中国内地上映>>>
+                陈末(邓超饰)被称为全城最贱，每天和王牌DJ小容(杜鹃饰)针锋相对，谁
+            </p>
+            <a href="#">联系我</a>
+        </div>
+        <div class="gx">
+            预祝朋友们观影快乐，天天开心！有建议欢迎反馈邮箱：lixuanhui789@gmail.com
+        </div>
+    </div>
+</body>
+</html>

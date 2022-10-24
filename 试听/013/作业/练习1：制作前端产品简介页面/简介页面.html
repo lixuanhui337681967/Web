@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简介页面</title>
+    <style>
+        .div1{
+            width: 80%;
+            height: 300px;
+            margin: 0 auto;
+        }
+        .div2{
+            font-size: 40px;
+            font-weight: bolder;
+            line-height: 200px;
+            height: 200px;
+            text-align: center;
+            color: #4A4848;
+        }
+        .div2 span{
+            color: #4EC3C3;
+        }
+        .div4{
+            font-size: 50px;
+            font-weight: bolder;
+            display: none;
+            color: red;
+        }
+        ul{
+            display: flex;  
+            padding: 0 15px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        li{
+            color: #9F93A3;
+            list-style: none;
+            height: 183px;
+            padding: 15px 0 0 20px;
+            width: 526px;
+            margin-top: 10px;
+            border: 1px solid #DEDEDE;
+        }
+        img{
+            width: 10%;
+        }
+        a{
+            color: #A1D8CB;
+        }
+        @media screen and (max-width: 749px){
+            .div2 , .div3{
+                display: none;
+            }
+            .div4{
+                display: block;
+            }
+        }
+        @media screen and (min-width: 750px)  and (max-width: 1350px) {
+            ul{
+                width: 600px;
+                flex-direction: column;
+            }
+            .div2{
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+        <div class="div1">
+            <div class="div2">专为前端而研制的<span>核心产品</span></div>
+            <div class="div3">
+                <ul>
+                    <li>
+                        <img src="images/Big_icon1.png" alt="">
+                        <p>JS基础库</p>
+                        <p>从小屏逐步村扩展到大屏，最终实现所有屏幕适配，适应移动互联需流。</p>
+                        <p><a href="#">查看产品 &gt;</a></p>
+                    </li>
+                    <li>
+                        <img src="images/Big_icon2.png" alt="">
+                        <p>CSS处理</p>
+                        <p>从小屏逐步村扩展到大屏，最终实现所有屏幕适配，适应移动互联需流。</p>
+                        <p><a href="#">查看产品 &gt;</a></p>
+                    </li>
+                    <li>
+                        <img src="images/Big_icon3.png" alt="">
+                        <p>兼容性</p>
+                        <p>从小屏逐步村扩展到大屏，最终实现所有屏幕适配，适应移动互联需流。</p>
+                        <p><a href="#">查看产品 &gt;</a></p>
+                    </li>
+                    <li>
+                        <img src="images/Big_icon4.png" alt="">
+                        <p>响应式</p>
+                        <p>从小屏逐步村扩展到大屏，最终实现所有屏幕适配，适应移动互联需流。</p>
+                        <p><a href="#">查看产品 &gt;</a></p>
+                    </li>
+                </ul>
+            </div>
+            <div class="div4">请放大</div>
+    </div>
+</body>
+</html>

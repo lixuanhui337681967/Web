@@ -1,0 +1,39 @@
+# **Web前端笔记Day03**
+
+
+
+## 
+
+1. input 控件
+
+2. lable 标签
+
+3. textarea 长文本控件
+
+4. select 下拉菜单
+
+5. fieldset 分组标签
+
+
+#### **HTML5中新增的元素**
+
+1. canvas 标签定义图像
+
+2. audio 音频
+
+3. video 视频 
+
+4. source 定义多媒体资源
+
+   
+
+#### 表单新属性
+
+1. Autofocus		获取焦点
+2. Autocomplete 自动提示数据
+3. Novalidate	关闭验证
+4. Required		必填项
+5. Pattern		正则表达式
+6. Maxlength	最大
+7. Minlength		最小
+

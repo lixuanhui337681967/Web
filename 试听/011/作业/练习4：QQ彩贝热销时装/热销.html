@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>热销</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .body{
+			width: 800px;
+			height: 400px;
+			margin: 0 auto;
+			border: 1px solid lightgrey;
+        }
+        /* 超级信用卡 */
+        li{
+            list-style: none;
+        }
+        .l{
+			width: 300px;
+			height: 400px;
+			border: 1px solid lightgrey;
+			float: left;
+        }
+        .l li:nth-child(3){
+			margin-left: 50px;
+		}
+		.l ul li{
+			height: 50px;
+			line-height: 20px;
+			padding-left:20px ;
+			padding-top:20px ;
+		}
+        /* 彩贝抢霸、热门优惠券 */
+        .r-left{
+            width: 250px;
+			height: 400px;
+			border: 1px solid lightgrey;
+			float: left;
+			line-height: 23px;
+
+        }
+        .r-top li:last-of-type{
+			margin-left: 100px;
+		}
+        .box1{
+				border: 1px solid lightgrey;
+				border-top:none;
+				border-left:none;
+				border-right:none;
+		}
+        .box1 ul li{
+			margin-left: 20px;
+		}
+		.box2{
+			border-top: 1px solid lightgrey;
+		}
+		.box2 ul li{
+			margin-left: 20px;
+		}
+        /* 促销活动、精挑细选 */
+        .r-right{
+            width: 244px;
+			height: 400px;
+			border: 1px solid lightgrey;
+			float: left;
+			line-height: 23px;
+			/* margin-left: 20px; */
+        }
+        .r-right li:last-of-type{
+			margin-left: 100px;
+		}
+
+		.box3{
+			padding-bottom:4px ;
+			border-bottom: 1px solid lightgrey;
+		}
+		.box3 ul li{
+			margin-left: 20px;
+		}
+		.box4 ul li{
+			margin-left: 20px;
+		}
+
+		li:img{
+			transition: all 1s ease-out;
+		}
+		li img:hover{
+			transform: translate(-12px,0);
+		}
+    </style>
+</head>
+<body>
+    <div class="body">
+         <div class="l">
+            <ul>
+                <li>超级信用卡</li>
+                <li>线上线下课累计彩贝积分</li>
+                <li><img src="images/1.bmp" alt="超级信用卡"></li>
+            </ul>
+         </div>
+         <div class="r-left">  
+            <div class="box1">
+                <ul>
+                    <li>彩贝抢霸</li>
+                    <li>每天10点更新</li>
+                    <li><img src="images/2.bmp" alt="彩贝抢霸"></li>
+                </ul>
+            </div>         
+            <div class="box2">
+                <ul>
+                    <li>促销活动</li>
+                    <li>汇集全网优惠</li>
+                    <li><img src="images/4.bmp" alt="促销活动"></li>
+                </ul>
+            </div>
+        </div>
+         <div class="r-right">       
+            <div class="box3">
+                <ul>
+                    <li>热门优惠劵</li>
+                    <li>全场免费领取</li>
+                    <li><img src="images/3.bmp" alt="热门优惠劵"></li>
+                </ul>
+            </div>   
+            <div class="box4">
+                <ul>
+                    <li>精挑细选</li>
+                    <li>给你最好的选择</li>
+                    <li><img src="images/5.bmp" alt="精挑细选"></li>
+                </ul>
+            </div>     
+        </div>
+    </div>
+</body>
+</html>

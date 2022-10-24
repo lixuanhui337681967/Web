@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function colNum(){
+            var result;
+            var num1 = prompt("请输入第一个数");
+            var num2 = prompt("请输入第二个数");
+            var sym = prompt("请输入运算符");
+            switch (sym){
+                case "+":
+                    result = parseInt(num1) +parseInt(num2);
+                    break;
+                case "-":
+                    result = parseInt(num1) - parseInt(num2);
+                    break;
+                case "*":
+                    result = parseInt(num1)  * parseInt(num2);
+                    break;
+                case "/":
+                        if(num2!=0){
+                            result = parseInt(num1) / parseInt(num2);
+                            break;
+                        }else{
+                            alert("输入错误！！！");
+                        }
+                        return;
+                default:
+                    alert("输入的运算符错误！");
+                    return;
+            }
+                alert("计算结果为" + num1 + sym + num2 + " = " + result);
+            }
+    </script>
+</head>
+<body>
+    <input name="btn" type="button" value="计算" onclick="colNum();"/>
+</body>
+</html>

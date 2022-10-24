@@ -1,0 +1,229 @@
+# 总结
+
+------
+
+
+
+#### CSS3选择器
+
+1. 属性选择器
+   获取有某个属性的元素
+
+   ```css
+           a[class] {
+               color: red;
+           }
+   ```
+
+   获取有某个属性等于某个值的元素
+
+   ```css
+           a[class="hot"] {
+               color: green;
+           }
+   ```
+
+   获取有某个属性以某个值开头的元素
+
+   ```css
+           a[href^="www"] {
+               color: yellow;
+           }
+   ```
+
+   获取有某个属性以某个值结尾的元素
+
+   ```css
+           a[href$="html"] {
+               color: orange;
+           }
+   ```
+
+   获取有某个属性包含某个值开头的元素
+
+   ```css
+           a[href*="news"] {
+               color: pink;
+           }
+   ```
+
+   获取有某个属性以某个值开头并且加一个-（中划线）的元素
+
+   ```css
+          a[class|="hot"] {
+               color: aqua;
+           }
+   ```
+
+   
+
+2. 伪类选择器
+   找到li的父元素中第三个子元素
+
+   ```css
+   		li:nth-child(3){
+   			color: pink;
+   		}
+   ```
+
+   找到li的父元素中倒数第二个子元素
+
+   ```css
+   		li:nth-last-child(2){
+   			color: red;
+   		}
+   ```
+
+   找到li的父元素中第二个类型是li的标签
+
+   ```css
+   		li:nth-of-type(2){
+   			color: orange;
+   		}
+   ```
+
+   找到li的父元素中倒数第三个类型是li的标签
+
+   ```css
+   		li:nth-last-of-type(3){
+   			color: blue;
+   		}
+   ```
+
+   找到li的父元素中最后一个子元素
+
+   ```css
+   		li:last-child{
+   			color: yellow;
+   		}
+   ```
+
+   找到li的父元素中第一个子元素
+
+   ```css
+   		li:first-child{
+   			color: green;
+   		}
+   ```
+
+   
+
+3. 伪元素选择器
+   获取p标签中第一个字
+
+   ```css
+           p::first-letter{
+               color: red;
+           }
+   ```
+
+   获取p标签中第一行内容
+
+   ```css
+           p::first-line{
+               color: green;
+           }
+   ```
+
+   在每个p标签之前插入内容
+
+   ```css
+           p::before{
+               content: "qq";
+               display: block;
+           }
+   ```
+
+   在每个p标签之后插入内容
+
+   ```css
+           p::after{
+               content: "aa";
+               display: block;
+           }
+   ```
+
+   
+
+#### 	CSS3颜色
+
+1. 十六进制颜色
+
+   ```css
+   p{
+   background-color:#ff0000;
+   }
+   ```
+
+   
+
+2. RGB颜色
+
+   ```css
+   p{
+   background-color:rgb(255,0,0);
+   }
+   ```
+
+   
+
+3. RGBA颜色(透明度)
+
+   ```css
+   p{
+   background-color:rgba(255,0,0,0.5);
+   }
+   ```
+
+4. HSL颜色
+
+   ```css
+   p{
+   background-color:hsl(120,65%,75%);
+   }
+   ```
+
+   
+
+5. HSLA颜色(透明度)
+
+   ```css
+   p{
+   background-color:hsla(120,65%,75%,0.3);
+   }
+   ```
+
+   
+
+#### CSS3文本效果
+
+1. 文本阴影
+
+   文本阴影：X偏移量  Y偏移量  模糊半径  颜色 偏移量：向右和向下是正值
+
+   ```css
+           h1{
+               text-shadow: 5px 5px 5px #666;
+           }
+   ```
+
+2. 文本溢出
+
+   ```css
+           .p1{
+               width: 500px;
+               border: 1px solid;
+               white-space: nowrap;
+               overflow: hidden;
+               text-overflow: clip;/*文本溢出时截断*/
+           }
+           .p2{
+               width: 500px;
+               border: 1px solid;
+               white-space: nowrap;
+               overflow: hidden;
+               text-overflow: ellipsis;/*文本溢出时使用省略号显示*/
+           }
+   ```
+
+   

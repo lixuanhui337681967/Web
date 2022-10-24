@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <script>
+    function computer(color,weight,brand,model){
+        var person = new Object();
+        person.color=color; //颜色
+        person.weight=weight; //重量
+        person.brand=brand; //品牌
+        person.model=model; //型号
+        person.fn1=function(){
+          console.log('看电影');
+        }
+        person.fn2=function(){
+          console.log('听音乐');
+        }
+        person.fn3=function(){
+          console.log('打游戏');
+        }
+        person.fn4=function(){
+          console.log('敲代码');
+        }
+        return person
+    }
+    var a =computer('white','0.4kg','iphone','pad')
+    console.log(a);
+    a.fn1();
+    a.fn2();
+    a.fn3();
+    a.fn4();
+</script>
+</head>
+<body>
+</body>
+</html>

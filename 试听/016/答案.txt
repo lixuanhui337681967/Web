@@ -1,0 +1,54 @@
+# 作业
+
+1. 作业3
+
+   以下 ECMAScript 变量命名格式正确的是（）
+
+   A．_125dollor   B．1207A   C．-dollor   D．This
+
+   A
+
+2. 作业4
+
+   请选择结果为真的选项（）
+
+   A．null == undefined
+
+   B．null === false
+
+   C．undefined == false
+
+   D．NaN == NaN 
+
+   A
+
+3. 作业5
+
+   下面的等式成立的是（）
+
+   A．parseInt(12.5) == parseFloat(12.5)
+
+   B．Number("") == parseFloat("")
+
+   C．isNaN("abc") == NaN
+
+   D．typeof (NaN) === “number”
+
+   D
+
+4. 作业6
+
+   alert( "32">"8" ) 的运行结果正确的是（）
+
+   A．true   B．False  C. 1  D.  0
+
+   B
+
+5. 作业7
+
+   计算如下结果为：
+
+   parseInt(Number(“12.88”))+parsFolat(“53.36abc”)+Number(Boolean(null))
+
+   12+53.36=65.36
+

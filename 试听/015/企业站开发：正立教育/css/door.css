@@ -1,0 +1,223 @@
+   /* 信息+入口 */
+   .door{
+    width: 1190px;
+    height: 460px;
+    background-color:  azure;
+    margin: 0 auto 30px;
+}
+.door .teach1{
+    float: left;
+    width: 355px;
+    height: 460px;
+    margin-right: 10px;
+    /* background-color: pink; */
+}
+.door .teach1 .teach-zige{
+    float: left;
+    width: 335px;
+    height: 40px;
+    padding-left: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 40px;
+    /* background-color: azure; */
+}
+.door .teach1 .teach-zige .red-border{
+    height: 18px;
+    width: 5px;
+    border: 4px solid red;
+    background-color: red;
+    float: left;
+    margin-top: 8px;
+    margin-left: -22px;
+}
+.door .teach1 .teach-zige a{
+    color: gray;
+    font-size: larger;
+    font-size: 14px;
+    margin-left: 160px;
+}
+.door .teach1 .teach-zige a:hover{
+    color: red;
+}
+.door .teach1 .teach-info1{
+    float: left;
+    width: 355px;
+    height: 270px;
+    margin-left: 10px;
+    /* background-color: azure; */
+}
+.door .teach1 .teach-info1 a{
+    float: left;
+    width: 365px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: black;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    border-bottom: 1px dashed gray;
+}
+.door .teach1 .teach-info1 a:hover{
+    color: red;
+}
+.door .teach1 .teach-img1{
+    width: 300px;
+    height: 120px;
+    float: left;
+    margin: 10px 32px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url(../images/left1.png);
+    background-position: center;
+}
+.door .teach2{
+    float: left;
+    width: 355px;
+    height: 460px;
+    margin-left: 10px;
+    /* background-color: yellow; */
+    margin-right: 30px;
+}
+.door .teach2 .teach-zhaokao{
+    float: left;
+    width: 335px;
+    height: 40px;
+    padding-left: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 40px;
+    /* background-color: azure; */
+}
+.door .teach2 .teach-zhaokao .red-border{
+    height: 18px;
+    width: 5px;
+    border: 4px solid red;
+    background-color: red;
+    float: left;
+    margin-top: 8px;
+    margin-left: -22px;
+}
+.door .teach2 .teach-zhaokao a{
+    color: gray;
+    font-size: larger;
+    font-size: 14px;
+    margin-left: 160px;
+}
+.door .teach2 .teach-zhaokao a:hover{
+    color: red;
+}
+.door .teach2 .teach-info2{
+    float: left;
+    width: 355px;
+    height: 270px;
+    margin-left: 10px;
+    /* background-color: azure; */
+}
+.door .teach2 .teach-info2 a{
+    float: left;
+    width: 365px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: black;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    border-bottom: 1px dashed gray;
+}
+.door .teach2 .teach-info2 a:hover{
+    color: red;
+}
+.door .teach2 .teach-img2{
+    width: 300px;
+    height: 120px;
+    float: left;
+    margin: 10px 32px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url(../images/left1.png);
+    background-position: center;
+}
+.door .way{
+    float: left;
+    width: 430px;
+    height: 460px;
+    /* background-color: blue; */
+}
+.door .way .way-logo{
+    width: 40px;
+    height: 40px;
+    float: left;
+    /* margin: 10px 32px; */
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url(../images/gezi.png);
+    background-position: center;
+}
+.door .way .way-title{
+    font-weight: bold;
+    font-size: 24px;
+    background-color: #EB0102;
+    float: left;
+    width: 370px;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 20px;
+}
+.door .way  li{
+    width: 142px;
+    height: 125px;
+    float: left;
+    /* border: 1px solid red; */
+}
+.door .way  li a{
+    color: black;
+    display: block;
+    padding-top: 1px;
+    text-align: center;
+}
+.door .way  li a:hover{
+    color: red;
+}
+.door .way  li i{
+    display: block;
+    margin: 20px auto;
+    width: 70px;
+    height: 70px;
+}
+.door .way  li:nth-child(1) i{
+    background: url(../images/nine1.png) no-repeat;
+    background-size: 100%;
+}   
+.door .way  li:nth-child(2) i{
+    background: url(../images/nine2.png) no-repeat;
+    background-size: 100%;
+}   
+.door .way  li:nth-child(3) i{
+    background: url(../images/nine3.png) no-repeat;
+    background-size: 100%;
+}   
+.door .way  li:nth-child(4) i{
+    background: url(../images/nine4.png) no-repeat;
+    background-size: 100%;
+}   
+.door .way  li:nth-child(5) i{
+    background: url(../images/nine5.png) no-repeat;
+    background-size: 100%;
+}   
+.door .way  li:nth-child(6) i{
+    background: url(../images/nine6.png) no-repeat;
+    background-size: 100%;
+}   
+.door .way  li:nth-child(7) i{
+    background: url(../images/nine1.png) no-repeat;
+    background-size: 100%;
+}   
+.door .way  li:nth-child(8) i{
+    background: url(../images/nine8.png) no-repeat;
+    background-size: 100%;
+}   
+.door .way  li:nth-child(9) i{
+    background: url(../images/nine9.png) no-repeat;
+    background-size: 100%;
+} 

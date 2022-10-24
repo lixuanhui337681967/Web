@@ -1,0 +1,13 @@
+        /* 轮播图 */
+.banner{
+    width: 1300px;
+    height: 310px;
+    /* background-color: yellow; */
+    margin: 0 auto;
+    border-top: 5px solid red;
+    border-bottom: 1px solid red;
+    background-repeat: fixed;
+    background-size: 100%;
+    background-image: url(../images/banner.png);
+    background-position: center;
+}

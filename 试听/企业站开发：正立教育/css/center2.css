@@ -1,0 +1,165 @@
+/* 推荐课程+测试 */
+.center2{
+    width: 1190px;
+    height: 290px;
+    /* background-color: green; */
+    margin: 0 auto;
+}
+.center2 .rec{
+    float: left;
+    width: 730px;
+    height: 290px;
+    margin-right:  30px;
+    /* background-color: red; */
+}
+.center2 .rec .rec-class{
+    float: left;
+    width: 700px;
+    height: 50px;
+    padding-left: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 50px;
+    background-color: azure;
+}
+.center2 .rec .rec-class .red-border{
+    height: 18px;
+    width: 5px;
+    border: 4px solid red;
+    background-color: red;
+    float: left;
+    margin-top: 12px;
+    margin-left: -20px;
+}
+.center2 .rec .rec-class a{
+    color: gray;
+    font-size: larger;
+    font-size: 14px;
+    margin-left: 510px;
+}
+.center2 .rec .rec-class a:hover{
+    color: red;
+}
+.center2 .rec .info1{
+    float: left;
+    width: 730px;
+    height: 120px;
+    background-color: azure;
+    border-bottom: 1px dashed gray;
+}
+.center2 .rec .info1 .info-img1{
+    width: 170px;
+    height: 100px;
+    float: left;
+    margin: 10px 10px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url(../images/last1.png);
+    background-position: center;
+}
+.center2 .rec .info2{
+    float: left;
+    width: 730px;
+    height: 120px;
+    background-color: azure;
+
+}
+.center2 .rec .info2 .info-img2{
+    width: 170px;
+    height: 100px;
+    float: left;
+    margin: 10px 10px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url(../images/last2.png);
+    background-position: center;
+}
+.center2 .rec span:nth-child(2){
+    float: left;
+    margin-top: 10px;
+    font-size: 20px;
+}
+.center2 .rec span:nth-child(3){
+    float: left;
+    margin-top: 10px;
+    margin-left: 80px;
+    font-size: 20px;
+}
+.center2 .rec p:nth-child(4){
+    float: left;
+    margin-top: 10px;
+    /* margin-left: 80px; */
+    font-size: 14px;
+    color: gray;
+}
+
+.center2 .test{
+    float: left;
+    width: 430px;
+    height: 290px;
+    background-color: azure;
+}
+.center2 .test .yousanjiao{
+    height: 0px;
+    width: 0px;
+    border: 10px solid white;
+    border-left: 10px solid red;
+    float: left;
+    margin-top: 10px;
+    margin-left: -10px;
+}
+.center2 .test .title{
+    font-weight: bold;
+    font-size: 24px;
+    border-bottom: 1px solid gray;
+    float: left;
+    width: 400px;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 30px;
+}
+.center2 .test  li{
+    width: 142px;
+    height: 125px;
+    float: left;
+    /* border: 1px solid red; */
+}
+.center2 .test  li a{
+    color: black;
+    display: block;
+    /* padding-top: 15px; */
+    text-align: center;
+}
+.center2 .test  li a:hover{
+    color: red;
+}
+.center2 .test  li i{
+    display: block;
+    margin: 10px auto;
+    width: 70px;
+    height: 70px;
+}
+.center2 .test  li:nth-child(1) i{
+    background: url(../images/six1.png) no-repeat;
+    background-size: 100%;
+}  
+.center2 .test  li:nth-child(2) i{
+    background: url(../images/six2.png) no-repeat;
+    background-size: 100%;
+}  
+.center2 .test  li:nth-child(3) i{
+    background: url(../images/six3.png) no-repeat;
+    background-size: 100%;
+}  
+.center2 .test  li:nth-child(4) i{
+    background: url(../images/six4.png) no-repeat;
+    background-size: 100%;
+}  
+.center2 .test  li:nth-child(5) i{
+    background: url(../images/six5.png) no-repeat;
+    background-size: 100%;
+}  
+.center2 .test  li:nth-child(6) i{
+    background: url(../images/six6.png) no-repeat;
+    background-size: 100%;
+}

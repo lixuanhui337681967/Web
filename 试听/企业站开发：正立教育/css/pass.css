@@ -1,0 +1,11 @@
+        /* 流程 */
+        .pass{
+            width: 1190px;
+            height: 100px;
+            /* background-color: blue; */
+            margin: 26px auto 8px;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-image: url(../images/img.png);
+            background-position: center;
+        }
