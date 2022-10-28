@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册</title>
+    <style>
+        .up{
+            font-size: 14px;
+            text-indent: 2em;
+            background-color: #ddf0fe;
+            line-height: 30px;
+            height: 30px;
+        }
+        /* .up .left{
+        } */
+        .up .right{
+            position: absolute;
+            right: 60px;
+            /* background-color: yellowgreen; */
+        }
+        .up .left a{
+            text-decoration: none;
+            color: #db840d;
+        }
+        .up .right span{
+            color: #f00;
+        }
+        .center{
+            /* background-color: gold; */
+            height: 100px;
+            border-bottom: 2px solid #27577b;
+        }
+        .center .rexian{
+            position: absolute;
+            right: 100px;
+            top: 76px;
+            text-align: right;
+        }
+        .center .phonenum{
+            font-style: italic;
+            color: #732a2e;
+            font-size: 30px;
+        }
+        .center2{
+            /* height: 500px; */
+            border-bottom: 1px solid #e2e2e2;
+            /* background-color: pink; */
+        }
+        .center2 span{
+            color: red;
+        }
+        .bottom a{
+            color: #3b3b3b;
+            text-decoration: none;
+        }
+        .bottom p{
+            color: #858585;
+        }
+    </style>
+</head>
+<body>
+        <div class="up">
+            <span class="left">
+                您好，欢迎来到福商城！想继续购物之旅？老用户请登录[
+                <a href="#">登陆</a>
+                ]或 新用户[
+                <a href="#">免费注册</a>
+                ]
+            </span>
+            <span class="right">
+                <img src="img/che.png" alt="购物车">
+                购物车有 <span>12</span> 件商品|
+                <img src="img/deng.png" alt="提示">
+                收藏提醒
+            </span>
+        </div>
+        <div class="center">
+            <img src="img/fu.png" alt="logo">
+            <div class="rexian">
+                <span>服务热线:</span>
+                <span class="phonenum">400-888-5388</span>
+            </div>
+        </div>
+        <div class="center2">
+            <table align="center" cellpadding="6">
+                <form action="#">
+                    <caption style="text-align: left; font-weight: bold;">
+                        <img src="img/ren.png" alt="注册">
+                        注册新会员
+                    </caption>
+                    <tr>
+                        <td>用户名</td>
+                        <td>
+                            <input type="text" name="name" id="name">
+                        </td>
+                        <td>
+                            <span>*</span>
+                            账号名是您以后登陆所用的账号，可以由字母a-z或数字组成。
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>email</td>
+                        <td>
+                            <input type="text" name="email" id="email">
+                        </td>
+                        <td>
+                            <span>*</span>
+                            您可以使用此邮箱登陆，请输入正确的常用邮箱。
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>密码</td>
+                        <td>
+                            <input type="password" name="password" id="password">
+                        </td>
+                        <td>
+                            <span>*</span>
+                            6-20位字符，密码由字母a-z及数字组成。
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>密码强度</td>
+                        <td>
+                            <img src="img/qiang.png" alt="强弱">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>确认密码</td>
+                        <td>
+                            <input type="password" name="rpassword" id="rpassword">
+                        </td>
+                        <td>
+                            <span>*</span>
+                            请再次输入密码
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>MSN</td>
+                        <td>
+                            <input type="text" name="MSN" id="MSN">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>QQ</td>
+                        <td>
+                            <input type="text" name="qq" id="qq">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>办公电话</td>
+                        <td>
+                            <input type="text" name="bphone" id="bphone">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>家庭电话</td>
+                        <td>
+                            <input type="text" name="hphone" id="hphone">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>手机</td>
+                        <td>
+                            <input type="text" name="phone" id="phone">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>密码提示问题</td>
+                        <td>
+                            <select name="mima" id="mima">
+                                <option value="m1" selected>请输入密码提示问题1</option>
+                                <option value="m2">请输入密码提示问题2</option>
+                                <option value="m3">请输入密码提示问题3</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>密码问题答案</td>
+                        <td>
+                            <input type="text" name="answer" id="answer">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <div style="font-size: 10px;">
+                                <input type="checkbox" name="yes" id="yes">
+                                我已仔细阅读并接受
+                                <a href="#" style="color: #88a3b3;">《服务协议》</a>
+                            </div>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="image" src="img/zhu.png" alt="注册">
+                        </td>
+                        <td></td>
+                    </tr>
+                </form>
+            </table>
+        </div>
+        <div class="bottom" style="text-align: center;">
+            <p style="font-size: 16px;">
+                <a href="#">关于我们</a>|
+                <a href="#">联系我们</a>|
+                <a href="#">人才招聘</a>|
+                <a href="#">千寻网</a>|
+                <a href="#">商家入驻</a>|
+                <a href="#">广告服务</a>|
+                <a href="#">移动终端</a>|
+                <a href="#">友情链接</a>|
+                <a href="#">销售联盟</a>
+            </p>
+            <p  style="font-size: 10px;">
+                北京市公安局海淀分局备案编号:110181681京ICP整070359号音箱制品经营许可证苏宿批005号
+            </p>
+            <p  style="font-size: 10px;">
+                Copyri ght2004-2011 fushangcheng福商城版权所有            </p>
+        </div>
+</body>
+</html>
