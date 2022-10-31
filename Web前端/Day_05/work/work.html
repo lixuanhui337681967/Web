@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作业1-10</title>
+    <script>
+        // 1.求1-100之间所有数的乘积
+        function btn01() {
+            var sum = 1;
+            var i = 1;
+            while (i <= 5) {
+                // while (i <= 100) {
+                sum *= i;
+                i++;
+            }
+            alert('1-100之间所有数的乘积为:' + sum);
+        }
+        // 2.求1-100之间所有奇数的和
+        function btn02() {
+            var sum = 0;
+            for (var i = 1; i <= 100; i++) {
+                if (i % 2 == 1) {
+                    sum += i;
+                }
+            }
+            alert('1-100之间所有奇数的和为:' + sum);
+        }
+        // 3.计算1-100之间能3整除的数的和
+        function btn03() {
+            var sum = 0;
+            for (var i = 1; i <= 100; i++) {
+                if (i % 3 == 0) {
+                    sum += i;
+                }
+            }
+            alert('1-100之间能3整除的数的和为' + sum);
+        }
+        // 4.计算1-100之间不能被7整除的数的和
+        function btn04() {
+            var sum = 0;
+            for (var i = 1; i <= 100; i++) {
+                if (i % 7 !== 0) {
+                    sum += i;
+                }
+            }
+            alert('1-100之间不能被7整除的数的和为:' + sum);
+        }
+        // 5.本金10000元存入银行，年利率是千分之三，每过1年，将本金和利息相加作为新的本金。计算5年后，获得的本金是多少？
+        function btn05() {
+            var Ymoney = 10000;
+            for (var year = 1; year <= 5; year++) {
+                Ymoney = Ymoney + 0.003 * Ymoney;
+            }
+            alert('5年后,获得的本金是' + Ymoney.toFixed(2));
+        }
+        // 6.有个人想知道，一年之内一对兔子能繁殖多少对？于是就筑了一道围墙把一对兔子关在里面。已知一对兔子每个月可以生一对小兔子，而一对兔子从出生后第3个月起每月生一对小兔子。假如一年内没有发生死亡现象，那么，一对兔子一年内（12个月）能繁殖成多少对？（兔子的规律为数列，1，1，2，3，5，8，13，21）
+        function btn06() {
+            var i;
+            var i1 = 1;
+            var i2 = 1;
+            for (var mounth = 3; mounth <= 12; mounth++) {
+                i = i2;
+                i2 = i2 + i1;
+                i1 = i;
+            }
+            alert('一对兔子一年内(12个月)能繁殖成' + i2 + '对');
+        }
+        // 7.求1-100之间不能被7整除的整数的和（用continue） 
+        function btn07() {
+            var sum = 0;
+            for (var i = 1; i <= 100; i++) {
+                if (i % 7 == 0) {
+                    continue;
+                }
+                sum += i;
+            }
+            alert('1-100之间不能被7整除的整数的和为' + sum);
+        }
+        // 8.求200-300之间所有的奇数的和（用continue）
+        function btn08() {
+            var sum = 0;
+            for (var i = 200; i <= 300; i++) {
+                if (i % 2 == 0) {
+                    continue;
+                }
+                sum += i;
+            }
+            alert('200-300之间所有的奇数的和' + sum);
+        }
+        // 9.求200-300之间第一个能被7整除的数（break）
+        /*
+        思路：break退出循环，不执行循环中后面剩下的东西
+            1、能被7整数的数指的是数除以7余数为0
+            2、for循环，找出第一个能被7整数的数
+            3、输出,break
+        */
+        function btn09() {
+            // var j = 1;
+            for (var i = 200; i <= 300; i++) {
+                if (i % 7 == 0) {
+                    alert('200-300之间第一个能被7整数的数' + i);
+                    // 出现第一个可以被7除以的数就结束循环
+                    // j++;
+                    break;
+                }
+            }
+        }
+        // 10.根据输入的值，判断输入的年份是不是闰年
+        function btn10() {
+            var a = prompt('请输入年份')
+            var regex = /^[0-9]+$/;
+            console.log(regex.test(a));
+            var status = regex.test(a);
+            if (isNaN(a)) {
+                alert('输入错误，请重新输入！')
+                return;
+            }
+            if (a % 400 == 0) {
+                alert(a + '是世纪闰年')
+            } else if (a % 4 == 0 && a % 100 != 0) {
+                alert(a + '是闰年')
+            } else {
+                alert(a + '不是闰年')
+            }
+        }
+        // 11.打印九九乘法表
+        function btn11() {
+            var char = '';
+            for (var i = 1; i <= 9; i++) {
+                for (var j = 1; j <= i; j++) {
+                    char += j + '*' + i + '=' + i * j + ' ';
+                }
+                console.log(char);
+                char = '';
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <button type="button" onclick="btn01()">第01题</button><br>
+    <button type="button" onclick="btn02()">第02题</button><br>
+    <button type="button" onclick="btn03()">第03题</button><br>
+    <button type="button" onclick="btn04()">第04题</button><br>
+    <button type="button" onclick="btn05()">第05题</button><br>
+    <button type="button" onclick="btn06()">第06题</button><br>
+    <button type="button" onclick="btn07()">第07题</button><br>
+    <button type="button" onclick="btn08()">第08题</button><br>
+    <button type="button" onclick="btn09()">第09题</button><br>
+    <button type="button" onclick="btn10()">第10题</button><br>
+    <button type="button" onclick="btn11()">第11题</button><br>
+
+</body>
+
+</html>
