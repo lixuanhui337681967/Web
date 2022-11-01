@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 将数组[10,1,35,61,89,36,55]冒泡排序，从小到大 -->
+    <script>
+        var a = [10,1,35,61,89,36,55];
+        function Mp(arr){
+            for(var i=0 ; i < arr.length-1 ; i++){
+                for (var j = 0; j < a.length-1-i; j++) {
+                    if(a[j] >a[j+1]){
+                        var c=a[j];
+                        a[j]=a[j+1];
+                        a[j+1]=c;
+                    }
+               } 
+            }
+            return arr;
+        }
+        console.log(Mp(a));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
