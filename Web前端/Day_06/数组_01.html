@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +8,8 @@
     <title>Document</title>
     <script>
         var arr1 = [];
-        var arr2 = [1,2,3,'a'];
-        var arr3 = [1,2,3,'a'];
+        var arr2 = [1, 2, 3, 'a'];
+        var arr3 = [1, 2, 3, 'a'];
         // var arr3 = new Array(3);
         // for (let index = 0; index < arr3.length; index++) {
         //     const element = arr3[index];
@@ -52,21 +53,23 @@
         // }
 
         // 要求将数组中的0去掉，将不为0的值存入一个新的数组，生成新的数组
-        var a=[1,0,2,0,5,6,4,8,0,3,0,0,0,4,6]
+        var a = [1, 0, 2, 0, 5, 6, 4, 8, 0, 3, 0, 0, 0, 4, 6]
         var newA = [];
         var leg = 0;
         a.forEach(element => {
-            if(element != 0){
+            if (element != 0) {
                 newA[leg] = element;
                 leg++;
-            }   
+            }
         });
         console.log(newA);
+        console.log(typeof (newA));
 
-        
     </script>
 </head>
+
 <body>
 
 </body>
+
 </html>

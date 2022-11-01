@@ -1,15 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        
+        // 注意点：不要定义同名的方法和变量
+        // var f1 = 1;
+        // Js函数的定义
+        // function f1(a, b) {
+        //     console.log(a);
+        //     console.log(b);
+        // }
+
+
+        // 注意点：调用函数需要加括号
+        // f1(13, 54);
+
+        // console.log(typeof (f1));
+
+        // var f2 = function (a, b, c) {
+        //     console.log(a);
+        //     console.log(b);
+        //     console.log(c);
+        // }
+        // f2(1, 2, 3)
+        // console.log(typeof(f2));
+
+        // 求一组数中的最大值函数表达式
+        var a=[15,999,166,158,249,12,0,36,596,1,46]
+        var max = function (x){
+            var maxNum = 0;
+            for(var i =0;i<x.length;i++){
+                if(maxNum < a[i]){
+                    maxNum = a[i]
+                }
+            }
+            console.log(maxNum);
+        }
+        max(a);
     </script>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>
