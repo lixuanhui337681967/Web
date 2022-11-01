@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var arr1 = [];
+        var arr2 = [1,2,3,'a'];
+        var arr3 = [1,2,3,'a'];
+        // var arr3 = new Array(3);
+        // for (let index = 0; index < arr3.length; index++) {
+        //     const element = arr3[index];
+        //     console.log(element);
+        // }
+
+        // 获取元素
+        // console.log(arr2[3]);
+
+        // 新增元素
+        // 向数组尾部添加
+        arr2.push(6);
+        // for (let index = 0; index < arr2.length; index++) {
+        //     const element = arr2[index];
+        //     console.log(element);
+        // }
+
+        // 删除元素
+        // 删除的最后一个元素
+        arr2.pop();
+        // for (let index = 0; index < arr2.length; index++) {
+        //     const element = arr2[index];
+        //     console.log(element);
+        // }
+
+        // 修改元素
+        arr3[3] = 'bdawwa';
+        // for (let index = 0; index < arr3.length; index++) {
+        //     const element = arr3[index];
+        //     console.log(element);
+        // }
+
+        // 遍历打印foreach
+        // arr3.forEach(element => {
+        //     console.log(element);
+        // });
+
+        // forof
+        // for (const iterator of arr3) {
+        //     console.log(iterator);
+        // }
+
+        // 要求将数组中的0去掉，将不为0的值存入一个新的数组，生成新的数组
+        var a=[1,0,2,0,5,6,4,8,0,3,0,0,0,4,6]
+        var newA = [];
+        var leg = 0;
+        a.forEach(element => {
+            if(element != 0){
+                newA[leg] = element;
+                leg++;
+            }   
+        });
+        console.log(newA);
+
+        
+    </script>
+</head>
+<body>
+
+</body>
+</html>
