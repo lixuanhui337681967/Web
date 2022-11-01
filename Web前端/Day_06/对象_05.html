@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 第一种，直接写
+        var a = {
+            name: '张三',
+            age: 16,
+            sex: '女'
+        }
+        console.log(a.name);
+        console.log(a.age);
+        console.log(a.sex);
+        console.log(typeof (a));
+
+        // 第二种，new Object
+        var b = new Object();
+        b.name = '小黑';
+        b.age = 4;
+        b.sex = '公';
+        console.log(b.name);
+        console.log(b.age);
+        console.log(b.sex);
+        console.log(typeof (b));
+
+        // 第三种，工厂
+        function createPerson(name, age, job) {
+            var person = new Object();
+            person.name = name;
+            erson.age = age;
+            person.job = job;
+            person.sayHi = function () {
+                console.log('Hello,everyBody');
+            }
+            return person;
+        }
+        var p1 = createPerson('张三', 22, 'actor');
+
+        // 第四种，構造函數
+        function Person(name, age, job) {
+            this.name = name;
+            this.age = age;
+            this.job = job;
+            this.sayHi = function () {
+                console.log('Hello,everyBody');
+            }
+        }
+        var p1 = new Person('张三', 22, 'actor');
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
