@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 注意点：Js中没有方法的重载
+        // 方法名相同(参数列表无关),会被覆盖
+        // 注意点：最好不要定义重名的方法(预解析)
+
+        // function f1() {
+        //     console.log(123);
+        // }
+
+        // function f1(a, b) {
+        //     console.log(456);
+        // }
+        // f1();
+
+        // 如果两个函数都是函数表达式，且函数名相同，函数的调用会调用最近的一个
+        // var f2 = function(){
+        //     console.log(123);
+        // }
+        // f2();
+        // var f2 = function(){
+        //     console.log(456);
+        // }
+
+        // 内置对象
+        // function f1(a,b) {
+        //     console.log(a);
+        //     console.log(b);
+        //     console.log(arguments[0]);
+        // }
+        // f1(29,30)
+
+        // 匿名函数
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
