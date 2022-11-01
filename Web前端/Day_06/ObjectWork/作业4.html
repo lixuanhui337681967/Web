@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 利用对象属性不能重复的特性给数组去重
+    1 遍历数组把数据作为key保存到对象中
+        obj[key]=1;
+    2 遍历对象,把key保存到数组中
+        arr.push(key); -->
+    <script>
+        var arr = [1, 1, 1, 2, 2, 2, 3, 3, 4, 4, 4, 5, 6];
+        function noSame(array) {
+            var temp = [];
+            var arr = [];
+            for (var i = 0; i < array.length; i++) {
+                temp[array[i]] = 1;
+            }
+            for (const key in temp) {
+                arr.push(key);
+            }
+            return arr;
+        }
+        console.log(noSame(arr));
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

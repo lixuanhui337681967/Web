@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 创建一个按钮对象,宽,高,背景颜色,点击行为,按钮有鼠标进入的行为 -->
+    <script>
+        var button2 = {
+            width            : '100px',
+            height           : '100px',
+            background_color : 'red',
+            touch            : function () {
+                console.log('鼠标点击的行为');
+            },
+            hover            : function () {
+                console.log('鼠标进入的行为');
+            }
+        }
+        console.log(button2.width);
+        console.log(button2.height);
+        console.log(button2.background_color);
+        button2.touch();
+        button2.hover();
+
+        // function butt(width, height, background_color) {
+        //     this.width  = width;
+        //     this.height = height;
+        //     this.background_color = background_color;
+        //     this.touch = function () {
+        //         console.log('鼠标点击的行为');
+        //     }
+        //     this.hover = function () {
+        //         console.log('鼠标进入的行为');
+        //     }
+        // }
+        // var button1 = new butt('100px', '100px', 'red');
+        // console.log(button1.background_color);
+        // console.log(button1.height);
+        // console.log(button1.width);
+        // button1.touch();
+        // button1.hover();
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
