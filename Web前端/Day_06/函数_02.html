@@ -8,26 +8,26 @@
     <title>Document</title>
     <script>
         // 注意点：不要定义同名的方法和变量
-        // var f1 = 1;
+        var f1 = 1;
         // Js函数的定义
-        // function f1(a, b) {
-        //     console.log(a);
-        //     console.log(b);
-        // }
+        function f1(a, b) {
+            console.log(a);
+            console.log(b);
+        }
 
 
         // 注意点：调用函数需要加括号
-        // f1(13, 54);
+        f1(13, 54);
 
-        // console.log(typeof (f1));
+        console.log(typeof (f1));
 
-        // var f2 = function (a, b, c) {
-        //     console.log(a);
-        //     console.log(b);
-        //     console.log(c);
-        // }
-        // f2(1, 2, 3)
-        // console.log(typeof(f2));
+        var f2 = function (a, b, c) {
+            console.log(a);
+            console.log(b);
+            console.log(c);
+        }
+        f2(1, 2, 3)
+        console.log(typeof(f2));
 
         // 求一组数中的最大值函数表达式
         var a=[15,999,166,158,249,12,0,36,596,1,46]
