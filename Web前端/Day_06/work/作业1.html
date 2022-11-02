@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,12 +8,12 @@
     <title>Document</title>
     <!--  数组去重，返回一个新数组 -->
     <script>
-        var arr = [1,1,1,2,3,4,5,5,5];
-        function getArr(arr){
-            for(var i=0;i<arr.length;i++){
-                for(var j=i+1;j<arr.length;j++){
-                    if(arr[i]==arr[j]){
-                        arr.splice(j,1);
+        var arr = [1, 1, 1, 2, 3, 4, 5, 5, 5];
+        function getArr(arr) {
+            for (var i = 0; i < arr.length; i++) {
+                for (var j = i + 1; j < arr.length; j++) {
+                    if (arr[i] == arr[j]) {
+                        arr.splice(j, 1);
                         j--;
                     }
                 }
@@ -20,10 +21,25 @@
             return arr;
         }
         console.log(getArr(arr));
+
+        console.log('==================');
+
+        // var arr = [1, 1, 1, 2, 2, 2, 3, 4, 5]
+        // var arr1 = []
+        // var a = 0
+        // arr.forEach(element => {
+        //     if (arr1[a] != element) {
+        //         arr1.push = element
+        //         a++
+        //     }
+        // });
+        // console.log(arr1);
     </script>
-    
+
 </head>
+
 <body>
 
 </body>
+
 </html>
