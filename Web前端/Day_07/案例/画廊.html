@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../Js/getByid.js"></script>
+    <style>
+        #small {
+            width: 900px;
+            background-color: pink;
+        }
+
+        img {
+            margin: 10px;
+        }
+
+        #big {
+            width: 900px;
+            background-color: bisque;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        美女画廊
+        <div id="small">
+            <img id="img1" src="../课上练习/images/1-small.jpg" width="200px">
+            <img id="img2" src="../课上练习/images/2-small.jpg" width="200px">
+            <img id="img3" src="../课上练习/images/3-small.jpg" width="200px">
+            <img id="img4" src="../课上练习/images/4-small.jpg" width="200px">
+        </div>
+        <div id="big">
+            <img id="img5" src="../课上练习/images/1.jpg" width="880px">
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    var b1 = getByid('img1')
+    b1.onmouseover = function () {
+        console.log(img1.src);
+        img5.src = '../课上练习/images/1.jpg'
+    }
+    var b2 = getByid('img2')
+    b2.onmouseover = function () {
+        console.log(img2.src);
+        img5.src = '../课上练习/images/2.jpg'
+    }
+    var b3 = getByid('img3')
+    b3.onmouseover = function () {
+        console.log(img3.src);
+        img5.src = '../课上练习/images/3.jpg'
+    }
+    var b4 = getByid('img4')
+    b4.onmouseover = function () {
+        console.log(img4.src);
+        img5.src = '../课上练习/images/4.jpg'
+    }
+</script>

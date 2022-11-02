@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../Js/getByid.js"></script>
+    <style>
+        div {
+            width: 600px;
+            height: 600px;
+            background-color: pink;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        #img1 {
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <!-- 74*64 -->
+        <img id="img1" src="../课上练习/images/fj.png" alt="">
+    </div>
+</body>
+
+</html>
+<script>
+    var feiji = getByid('img1')
+    bottom = 0
+    lef = 263
+    feiji.style.bottom = bottom + 'px'
+    feiji.style.left = lef + 'px'
+    document.onkeydown = function (event) {
+        var key = event.key
+        console.log(key);
+        if (key == 'w' && bottom < 536) {
+            bottom += 10
+        }
+        if (key == 's' && bottom > 0) {
+            bottom -= 10
+        }
+        if (key == 'a' && lef > 0) {
+            lef -= 10
+        }
+        if (key == 'd' && lef < 526) {
+            lef += 10
+        }
+        feiji.style.bottom = bottom + 'px'
+        feiji.style.left = lef + 'px'
+    }
+</script>
