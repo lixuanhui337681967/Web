@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #one {
+            width: 680px;
+            margin: 0 auto;
+            /* background-color: red; */
+        }
+
+        #two {
+            width: 600px;
+            margin: 0 auto;
+            /* background-color: gold; */
+        }
+
+        #three {
+            width: 470px;
+            margin: 0 auto;
+            /* background-color: gray; */
+        }
+
+        span {
+            display: inline-block;
+            width: 40px;
+            height: 30px;
+            text-align: center;
+            border: 1px solid black;
+            border-radius: 20%;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+        <div id="one">
+            <span id="q">q</span>
+            <span id="w">w</span>
+            <span id="e">e</span>
+            <span id="r">r</span>
+            <span id="t">t</span>
+            <span id="y">y</span>
+            <span id="u">u</span>
+            <span id="i">i</span>
+            <span id="o">o</span>
+            <span id="p">p</span>
+        </div>
+        <div id="two">
+            <span id="a">a</span>
+            <span id="s">s</span>
+            <span id="d">d</span>
+            <span id="f">f</span>
+            <span id="g">g</span>
+            <span id="h">h</span>
+            <span id="j">j</span>
+            <span id="k">k</span>
+            <span id="l">l</span>
+        </div>
+        <div id="three">
+            <span id="z">z</span>
+            <span id="x">x</span>
+            <span id="c">c</span>
+            <span id="v">v</span>
+            <span id="b">b</span>
+            <span id="n">n</span>
+            <span id="m">m</span>
+        </div>
+</body>
+
+</html>
+<script>
+    document.onkeydown = function (event) {
+        var keycode = event.keyCode
+        if (keycode >= 65 && keycode <= 90) {
+            var char = document.getElementById(event.key)
+            var a1 = parseInt(Math.random()*255)
+            var a2 = parseInt(Math.random()*255)
+            var a3 = parseInt(Math.random()*255)
+            char.style.backgroundColor = 'rgb(' + a1 + ',' + a2 + ',' + a3 + ')'
+        }
+    }
+    document.onkeyup = function (event) {
+        var keycode = event.keyCode
+        if (keycode >= 65 && keycode <= 90) {
+            var char = document.getElementById(event.key)
+            char.style.backgroundColor = 'white'
+        }
+    }
+
+</script>
