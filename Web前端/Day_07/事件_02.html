@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script  src="Js/getByid.js"></script>
+    <style>
+        .c1{
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+            background-color: pink;
+        }
+        .c2{
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+            background-color: hotpink;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.baidu.com" onclick="return false">百度一下</a>
+    <div class="c1" id="d1" onclick="">
+        <div class="c2" id="d2">
+
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    // 迟绑定
+    var a = getByid('d1')
+    a.onclick = function(){
+        // window.location.href='https://www.baidu.com';
+        console.log(123);
+    }
+    console.log(a);
+</script>

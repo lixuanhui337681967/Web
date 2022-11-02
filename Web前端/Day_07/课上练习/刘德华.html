@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="Js/刘德华.js"></script>
+    <style>
+        #span1,
+        #span2 {
+            color: #136ec2;
+        }
+    </style>
+</head>
+
+<body>
+    <p>刘德华(Andy Lau),1961年9月27日出生于<span id="span1">中国香港</span> ,籍贯广东新会，中国香港影视男演员、歌手、制片人、作词人。</p>
+    <p>1981年出演电影处女作《彩云曲》。1983年主演的武侠剧《<span id="span2">神雕侠侣</span>》在香港取得62点的收视纪录 [1] 。1985年发行首张个人专辑《只知道此刻爱你》 [8]
+        。1990年凭借专辑《可不可以》在歌坛获得关注。1991年创办天幕电影公司 [2] 。1994年获得十大劲歌金曲最受欢迎男歌星奖;同年担任剧情片《天与地》的制片人。1995年在央视春晚上演唱其代表作《忘情水》 [9]
+        。2000年凭借警匪片《暗战》获得金像奖最佳男主角奖 [3] ；同年被《吉尼斯世界纪录大全》评为获奖最多的香港男歌手 [10] 。</p>
+</body>
+
+</html>
+<script>
+    var a = getByid('span1')
+    a.onclick = function () {
+        window.location.href = 'https://baike.baidu.com/item/%E9%A6%99%E6%B8%AF/128775?fromModule=lemma_inlink&fromtitle=%E4%B8%AD%E5%9B%BD%E9%A6%99%E6%B8%AF&fromid=50041231';
+    }
+    var b = getByid('span2')
+    b.onclick = function () {
+        window.location.href = 'https://baike.baidu.com/item/%E7%A5%9E%E9%9B%95%E4%BE%A0%E4%BE%A3/7798209?fromModule=lemma_inlink';
+    }
+</script>

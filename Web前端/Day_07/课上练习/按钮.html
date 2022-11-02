@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../Js/getByid.js"></script>
+    <style>
+        button {
+            width: 100px;
+            margin-bottom: 10px;
+        }
+
+        .c1 {
+            border: 10px solid red;
+        }
+
+        .c2 {
+            border: 10px solid green;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <button id="bt1" type="button">更换图片</button>
+        <button id="bt2" type="button">显示</button>
+        <button id="bt3" type="button">隐藏</button>
+        <button id="bt4" type="button">改变大小</button>
+        <button id="bt5" type="button">切换Class</button>
+    </div>
+    <div>
+        <img src="./images/1.jpg" width="300" id="img1" class="c1" alt="">
+    </div>
+</body>
+
+</html>
+
+<script>
+    // 更换图片
+    var b1 = getByid('bt1')
+    b1.onclick = function () {
+        console.log(img1.src);
+        if(img1.src == 'http://127.0.0.1:5500/Web%E5%89%8D%E7%AB%AF/Day_07/%E8%AF%BE%E4%B8%8A%E7%BB%83%E4%B9%A0/images/1.jpg'){
+            img1.src = './images/12.jpg'
+        }else {
+            img1.src= './images/1.jpg'
+        }
+    }
+    // 显示
+    var b2 = getByid('bt2')
+    b2.onclick = function(){
+        img1.style.display = 'block'
+    }
+    // 隐藏
+    var b3 = getByid('bt3')
+    b3.onclick = function(){
+        img1.style.display = 'none'
+    }
+    // 改变大小
+    var b4 = getByid('bt4')
+    b4.onclick = function(){
+        img1.style.width = "600px"
+    }
+    // 切换Class
+    var b5 = getByid('bt5')
+    b5.onclick = function(){
+        if(img1.className == 'c1'){
+            img1.className = 'c2'
+        }else{
+            img1.className = 'c1'
+        }
+    }
+</script>
