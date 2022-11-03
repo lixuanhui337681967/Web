@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #bg{
+            width: 600px;
+            height: 600px;
+            margin: 0 auto;
+            background-color: pink;
+            position: relative;
+        }
+        #user{
+            width: 30px;
+            height: 30px;
+            background-color: hotpink;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div id="bg">
+        <div id="user">
+
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    var bg = document.getElementById('bg')
+    var user = document.getElementById('user')
+    var topp = 0
+    var lef = 0
+    document.onkeydown = function(event){
+        var key = event.key
+        if(key == 'w' && topp > 0){
+            topp -= 30
+        }else if(key == 's' && topp < 570){
+            topp += 30
+        }else if(key == 'a' && lef > 0){
+            lef -= 30
+        }
+        else if(key == 'd' && lef < 570){
+            lef += 30
+        }else if(key == ' '){
+            var imgNode = document.createElement('img')
+            imgNode.src = '炸弹图片'
+            imgNode.style.width = 30 + 'px'
+            imgNode.style.height = 30 + 'px'
+            imgNode.style.position = 'absolute'
+            imgNode.style.top = topp + 'px'
+            imgNode.style.left = lef + 'px'
+            bg.appendChild(imgNode)
+            setTimeout(function(){
+                imgNode.src = '爆炸特效'
+                setTimeout(function(){
+                    imgNode.remove()
+                },1000)
+            },2000)
+        }
+        user.style.top = topp + 'px'
+        user.style.left = lef + 'px'
+
+    }
+</script>

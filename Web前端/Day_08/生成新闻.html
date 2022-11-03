@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <button type="button" id="btn">生成新闻</button>
+    <button id="btn">生成新闻</button>
     <div id="box">
 
     </div>
@@ -30,8 +30,6 @@
         for(var i = 0 ; i<list.length ; i++){
             var li = document.createElement('li')
             li.innerHTML = list[i]
-            li.style.fontSize = '20px'
-            li.style.color = 'red'
             ul1.appendChild(li)
         }
         btn1.disabled = true

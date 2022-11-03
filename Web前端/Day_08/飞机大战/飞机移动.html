@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 900px;
+            height: 600px;
+            background-image: url(./images/73.png);
+            background-size: 900px 600px;
+            /* background-color: pink; */
+            margin: 0 auto;
+            position: relative;
+        }
+
+        #img1 {
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="bg">
+        <!-- 74*64 -->
+        <img id="img1" src="./images/fj.png" alt="">
+    </div>
+</body>
+
+</html>
+<script>
+    var feiji = document.getElementById('img1')
+    bottom = 0
+    lef = 413
+    feiji.style.bottom = bottom + 'px'
+    feiji.style.left = lef + 'px'
+    document.onkeydown = function (event) {
+        var key = event.key
+        console.log(key);
+        if (key == 'w' && bottom < 536) {
+            bottom += 10
+        } else if (key == 's' && bottom > 0) {
+            bottom -= 10
+        } else if (key == 'a' && lef > 0) {
+            lef -= 10
+        } else if (key == 'd' && lef < 826) {
+            lef += 10
+        } else if (key == ' ') {
+            setInterval(function () {
+
+            }, 500)
+            var imgNode = document.createElement('img')
+            imgNode.src = './images/bullet_01.png'
+            imgNode.style.width = 40 + 'px'
+            imgNode.style.height = 40 + 'px'
+            imgNode.style.position = 'absolute'
+            var p_bottom = bottom + 60
+            imgNode.style.bottom = p_bottom + 'px'
+            imgNode.style.left = lef + 16 + 'px'
+            bg.appendChild(imgNode)
+            setTimeout(function () {
+                var inter1 = setInterval(function () {
+                    if (p_bottom < 540) {
+                        p_bottom += 40
+                        imgNode.style.bottom = p_bottom + 'px'
+                        bg.appendChild(imgNode)
+                    } else {
+                        imgNode.remove()
+                    }
+                }, 50)
+                window.clearInterval(inter1);
+            }, 500)
+        }
+        feiji.style.bottom = bottom + 'px'
+        feiji.style.left = lef + 'px'
+    }
+</script>
