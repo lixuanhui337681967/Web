@@ -9,9 +9,11 @@
     <script src="../Js/getByid.js"></script>
     <style>
         div {
-            width: 600px;
+            width: 900px;
             height: 600px;
-            background-color: pink;
+            background-image: url(../课上练习/images/73.png) ;
+            background-size: 900px 600px;
+            /* background-color: pink; */
             margin: 0 auto;
             position: relative;
         }
@@ -33,7 +35,7 @@
 <script>
     var feiji = getByid('img1')
     bottom = 0
-    lef = 263
+    lef = 413
     feiji.style.bottom = bottom + 'px'
     feiji.style.left = lef + 'px'
     document.onkeydown = function (event) {
@@ -48,7 +50,7 @@
         if (key == 'a' && lef > 0) {
             lef -= 10
         }
-        if (key == 'd' && lef < 526) {
+        if (key == 'd' && lef < 826) {
             lef += 10
         }
         feiji.style.bottom = bottom + 'px'

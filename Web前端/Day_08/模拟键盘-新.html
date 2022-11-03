@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .keyboard {
+            width: 930px;
+            height: 400px;
+            background: #c2ccdb;
+            padding: 3px;
+            border-radius: 6px;
+            margin: 0 auto;
+            background: #d8dee8;
+            position: relative;
+            box-shadow: -1px -1px 2px #f3f5f8
+        }
+
+        #num {
+            position: absolute;
+            top: 16px;
+            /* left: 4px; */
+            /* background-color: pink; */
+        }
+
+        #one {
+            position: absolute;
+            top: 70px;
+            left: 4px;
+            /* background-color: red; */
+        }
+
+        #two {
+            position: absolute;
+            top: 125px;
+            left: 4px;
+            /* background-color: gold; */
+        }
+
+        #three {
+            position: absolute;
+            top: 180px;
+            left: 4px;
+            /* background-color: gray; */
+        }
+
+        #down {
+            position: absolute;
+            top: 234px;
+            left: 4px;
+            /* background-color: blue; */
+        }
+
+        span {
+            display: inline-block;
+            width: 40px;
+            height: 30px;
+            text-align: center;
+            background-color: black;
+            color: white;
+            border-radius: 6px;
+            border: 2px solid white;
+            margin: 2px;
+            padding: 6px;
+            font-size: 8px;
+        }
+
+        .back {
+            width: 60px;
+        }
+
+        .tab {
+            width: 50px;
+        }
+
+        .youXie {
+            width: 50px;
+        }
+
+        .Cap {
+            width: 78px;
+        }
+
+        .Enter {
+            width: 87px;
+        }
+
+        .zuoSh {
+            width: 103px;
+        }
+
+        .youSh {
+            width: 126px;
+        }
+
+        .kongge {
+            width: 448px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="keyboard">
+        <div id="num">
+            <span>~</span>
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>5</span>
+            <span>6</span>
+            <span>7</span>
+            <span>8</span>
+            <span>9</span>
+            <span>0</span>
+            <span>-</span>
+            <span>=</span>
+            <span class="back">Back</span>
+        </div>
+        <div id="one">
+            <span class="tab">Tab</span>
+            <span>q</span>
+            <span>w</span>
+            <span>e</span>
+            <span>r</span>
+            <span>t</span>
+            <span>y</span>
+            <span>u</span>
+            <span>i</span>
+            <span>o</span>
+            <span>p</span>
+            <span>[</span>
+            <span>]</span>
+            <span class="youXie">\</span>
+        </div>
+        <div id="two">
+            <span class="Cap">CapsLk</span>
+            <span>a</span>
+            <span>s</span>
+            <span>d</span>
+            <span>f</span>
+            <span>g</span>
+            <span>h</span>
+            <span>j</span>
+            <span>k</span>
+            <span>l</span>
+            <span>;</span>
+            <span id="dian">'</span>
+            <span id="Enter" class="Enter">Enter</span>
+        </div>
+        <div id="three">
+            <span id="zuoSh" class="zuoSh">Shift</span>
+            <span>z</span>
+            <span>x</span>
+            <span>c</span>
+            <span>v</span>
+            <span>b</span>
+            <span>n</span>
+            <span>m</span>
+            <span>&lt;</span>
+            <span>&gt;</span>
+            <span>/</span>
+            <span class="youSh">Shift</span>
+        </div>
+        <div id="down">
+            <span>Ctrl</span>
+            <span>💪</span>
+            <span>Alt</span>
+            <span class="kongge">&nbsp;</span>
+            <span>Alt</span>
+            <span>Fn</span>
+            <span>🌈</span>
+            <span>Ctrl</span>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    var spanList = document.getElementsByTagName('span')
+    document.onkeydown = function (event) {
+        var key = event.key
+        var a1 = parseInt(Math.random() * 255)
+        var a2 = parseInt(Math.random() * 255)
+        var a3 = parseInt(Math.random() * 255)
+        for (const iterator of spanList) {
+            if (iterator.innerText == key) {
+                iterator.style.backgroundColor = 'rgb(' + a1 + ',' + a2 + ',' + a3 + ')'
+            }
+        }
+    }
+    document.onkeyup = function (event) {
+        var key = event.key
+        for (const iterator of spanList) {
+            if (iterator.innerText == key) {
+                iterator.style.backgroundColor = 'black'
+            }
+        }
+    }
+</script>
