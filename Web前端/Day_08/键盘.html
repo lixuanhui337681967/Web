@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: black;
+    }
+
+    .box {
+      background-color: gray;
+      width: 770px;
+      margin: 100px auto;
+      padding: 10px;
+    }
+
+    .key {
+      border: 1px solid gray;
+      background-color: white;
+      color: black;
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      float: left;
+    }
+
+    .row1,
+    .row2,
+    .row3,
+    .row4,
+    .row5,
+    .row6 {
+      overflow: hidden;
+    }
+
+    .row1 {
+      margin-bottom: 25px;
+    }
+
+    .row1>.key {
+      line-height: 50px;
+    }
+
+    .blank1 {
+      width: 50px;
+      height: 50px;
+      background-color: gray;
+      float: left;
+    }
+
+    .blank0_5 {
+      background-color: gray;
+      width: 25px;
+      height: 50px;
+      float: left;
+    }
+
+    .size2 {
+      width: 100px;
+      line-height: 50px;
+    }
+
+    .size1_25 {
+      width: 62.5px;
+      line-height: 50px;
+    }
+
+    .size1_5 {
+      width: 75px;
+      line-height: 50px;
+    }
+
+    .size1_75 {
+      width: 87.5px;
+      line-height: 50px;
+    }
+
+    .size2_25 {
+      width: 112.5px;
+      line-height: 50px;
+    }
+
+    .size2_75 {
+      width: 137.5px;
+      line-height: 50px;
+    }
+
+    .size6_25 {
+      width: 312.5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div class="row1">
+      <div class="key" location="0" keyCode="27">ESC</div>
+      <div class="blank1"></div>
+      <div class="key">F1</div>
+      <div class="key">F2</div>
+      <div class="key">F3</div>
+      <div class="key">F4</div>
+      <div class="blank0_5"></div>
+      <div class="key">F5</div>
+      <div class="key">F6</div>
+      <div class="key">F7</div>
+      <div class="key">F8</div>
+      <div class="blank0_5"></div>
+      <div class="key">F9</div>
+      <div class="key">F10</div>
+      <div class="key">F11</div>
+      <div class="key">F12</div>
+    </div>
+    <div class="row2">
+      <div class="key">~<br>`</div>
+      <div class="key">!<br>1</div>
+      <div class="key">@<br>2</div>
+      <div class="key">#<br>3</div>
+      <div class="key">$<br>4</div>
+      <div class="key">%<br>5</div>
+      <div class="key">^<br>6</div>
+      <div class="key">&<br>7</div>
+      <div class="key">*<br>8</div>
+      <div class="key">(<br>9</div>
+      <div class="key">)<br>0</div>
+      <div class="key">_<br>-</div>
+      <div class="key">+<br>=</div>
+      <div class="key size2">BACKSPACE</div>
+    </div>
+    <div class="row3">
+      <div class="key size1_5">TAB</div>
+      <div class="key">Q</div>
+      <div class="key">W</div>
+      <div class="key">E</div>
+      <div class="key">R</div>
+      <div class="key">T</div>
+      <div class="key">Y</div>
+      <div class="key">U</div>
+      <div class="key">I</div>
+      <div class="key">O</div>
+      <div class="key">P</div>
+      <div class="key">{<br>[</div>
+      <div class="key">}<br>]</div>
+      <div class="key size1_5" style="line-height:22px;">|<br>\</div>
+    </div>
+    <div class="row4">
+      <div class="key size1_75">CAPSLOCK</div>
+      <div class="key">A</div>
+      <div class="key">S</div>
+      <div class="key">D</div>
+      <div class="key">F</div>
+      <div class="key">G</div>
+      <div class="key">H</div>
+      <div class="key">J</div>
+      <div class="key">K</div>
+      <div class="key">L</div>
+      <div class="key">:<br>;</div>
+      <div class="key">"<br>'</div>
+      <div class="key size2_25">ENTER</div>
+    </div>
+    <div class="row5">
+      <div class="key size2_25 Shift" location="1" keyCode="16">SHIFT</div>
+      <div class="key">Z</div>
+      <div class="key">X</div>
+      <div class="key">C</div>
+      <div class="key">V</div>
+      <div class="key">B</div>
+      <div class="key">N</div>
+      <div class="key">M</div>
+      <div class="key">&lt;<br>,</div>
+      <div class="key">&gt;<br>.</div>
+      <div class="key">?<br>/</div>
+      <div class="key size2_75" location="2" keyCode="16">SHIFT</div>
+    </div>
+    <div class="row6">
+      <div class="key size1_25" location="1" keyCode="17">CTRL</div>
+      <div class="key size1_25" location="1" keyCode="91">WIN</div>
+      <div class="key size1_25" location="1" keyCode="18">ALT</div>
+      <div class="key size6_25" location="0" keyCode="32">&nbsp;</div>
+      <div class="key size1_25" location="2" keyCode="18">ALT</div>
+      <div class="key size1_25" location="2" keyCode="91">WIN</div>
+      <div class="key size1_25" location="0" keyCode="93">MENU</div>
+      <div class="key size1_25" location="2" keyCode="17">CTRL</div>
+    </div>
+  </div>
+</body>
+
+</html>
+<script >
+  var keyList = document.getElementsByClassName("key");
+  window.onkeydown = function (event) {
+    event.preventDefault();
+    for (const iterator of keyList) {
+      if (iterator.innerText == event.key.toUpperCase() && event.key != "Alt" && event.key != "Shift" || ((iterator.innerText.slice(-1) == event.key || iterator.innerText.slice(0, 1) == event.key) && iterator.innerHTML.slice(-5, -1) == "<br>") || iterator.getAttribute("keyCode") == parseInt(event.keyCode) && iterator.getAttribute("location") == parseInt(event.location)) {
+        iterator.style.backgroundColor = "black";
+        iterator.style.color = "white";
+      }
+    }
+  }
+  window.onkeyup = function (event) {
+    for (const iterator of keyList) {
+      if (iterator.innerText == event.key.toUpperCase() && event.key != "Alt" && event.key != "Shift" || ((iterator.innerText.slice(-1) == event.key || iterator.innerText.slice(0, 1) == event.key) && iterator.innerHTML.slice(-5, -1) == "<br>") || iterator.getAttribute("keyCode") == parseInt(event.keyCode) && iterator.getAttribute("location") == parseInt(event.location)) {
+        iterator.style.backgroundColor = "white";
+        iterator.style.color = "black";
+      }
+    }
+  }
+</script>

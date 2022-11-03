@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" id="btn">生成新闻</button>
+    <div id="box">
+
+    </div>
+</body>
+</html>
+<script>
+    var list=['乘火车飞机不再查核酸？多地回应',
+    '多地强调：不能无休止地管控和限制',
+    '第五届进博会将开启',
+    '“史上最凶班主任”火了 教育局回应',
+    '郑州富士康薪资翻倍招新人',
+    '加拿大发生车祸 中国留学生2死2伤',
+    '刘强东转让所持京东产发股份',
+    '宝妈带2岁儿子进女厕被骂没素质',
+    '一支核酸检测病毒采样管多少钱']
+    var btn1 = document.getElementById('btn')
+    btn1.onclick = function(){
+        var ul1 = document.createElement('ul')
+        box.appendChild(ul1)
+        for(var i = 0 ; i<list.length ; i++){
+            var li = document.createElement('li')
+            li.innerHTML = list[i]
+            li.style.fontSize = '20px'
+            li.style.color = 'red'
+            ul1.appendChild(li)
+        }
+        btn1.disabled = true
+        btn1.innerText = '已生成,不能点击'
+    }
+</script>
