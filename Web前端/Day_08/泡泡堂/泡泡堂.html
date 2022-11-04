@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- 1.泡泡堂课堂案例，人物移动+炸弹爆炸到消失 -->
+    <!-- 2.泡泡堂，bg随机生成障碍物，爆炸炸毁十字范围内的障碍物，炸到自己游戏结束 -->
     <style>
         #bg{
             width: 600px;
@@ -24,7 +26,7 @@
 <body>
     <div id="bg">
         <div id="user">
-
+            <img src="./images/45.gif" alt="" width="30px" height="30px        ">
         </div>
     </div>
 </body>
@@ -47,7 +49,7 @@
             lef += 30
         }else if(key == ' '){
             var imgNode = document.createElement('img')
-            imgNode.src = '炸弹图片'
+            imgNode.src = './images/pp.jpg'
             imgNode.style.width = 30 + 'px'
             imgNode.style.height = 30 + 'px'
             imgNode.style.position = 'absolute'
@@ -55,7 +57,7 @@
             imgNode.style.left = lef + 'px'
             bg.appendChild(imgNode)
             setTimeout(function(){
-                imgNode.src = '爆炸特效'
+                imgNode.src = './images/bz.gif'
                 setTimeout(function(){
                     imgNode.remove()
                 },1000)

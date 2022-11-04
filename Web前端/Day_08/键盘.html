@@ -11,10 +11,7 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-    }
-
-    body {
-      background-color: black;
+      font-size: 8px;
     }
 
     .box {
@@ -26,8 +23,8 @@
 
     .key {
       border: 1px solid gray;
-      background-color: white;
-      color: black;
+      background-color: black;
+      color: white;
       width: 50px;
       height: 50px;
       text-align: center;
@@ -202,16 +199,17 @@
     event.preventDefault();
     for (const iterator of keyList) {
       if (iterator.innerText == event.key.toUpperCase() && event.key != "Alt" && event.key != "Shift" || ((iterator.innerText.slice(-1) == event.key || iterator.innerText.slice(0, 1) == event.key) && iterator.innerHTML.slice(-5, -1) == "<br>") || iterator.getAttribute("keyCode") == parseInt(event.keyCode) && iterator.getAttribute("location") == parseInt(event.location)) {
-        iterator.style.backgroundColor = "black";
-        iterator.style.color = "white";
+        var a1 = parseInt(Math.random() * 255)
+        var a2 = parseInt(Math.random() * 255)
+        var a3 = parseInt(Math.random() * 255)
+        iterator.style.backgroundColor = 'rgb(' + a1 + ',' + a2 + ',' + a3 + ')'
       }
     }
   }
   window.onkeyup = function (event) {
     for (const iterator of keyList) {
       if (iterator.innerText == event.key.toUpperCase() && event.key != "Alt" && event.key != "Shift" || ((iterator.innerText.slice(-1) == event.key || iterator.innerText.slice(0, 1) == event.key) && iterator.innerHTML.slice(-5, -1) == "<br>") || iterator.getAttribute("keyCode") == parseInt(event.keyCode) && iterator.getAttribute("location") == parseInt(event.location)) {
-        iterator.style.backgroundColor = "white";
-        iterator.style.color = "black";
+        iterator.style.backgroundColor = "black";
       }
     }
   }

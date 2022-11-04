@@ -5,12 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>飞机大战</title>
+    <!-- 1.飞机移动+炮弹生成到消失 -->
+    <!-- 2.飞机大战，敌方战机生成和遭遇炮弹，和炮弹一起消失 -->
     <style>
         div {
             width: 900px;
             height: 600px;
             background-image: url(./images/73.png);
+            /* background-image: url(../49.png); */
             background-size: 900px 600px;
             /* background-color: pink; */
             margin: 0 auto;
@@ -26,7 +29,7 @@
 <body>
     <div id="bg">
         <!-- 74*64 -->
-        <img id="img1" src="./images/fj.png" alt="">
+        <img id="img1" src="./images/45.gif" width="74px" height="64px" alt="">
     </div>
 </body>
 
@@ -37,44 +40,90 @@
     lef = 413
     feiji.style.bottom = bottom + 'px'
     feiji.style.left = lef + 'px'
+    var fire = false //设置开火状态，默认 没有开火false
+    var inter1 //生成子弹
+    var inter2 //子弹移动
+    var inter3 //生成敌机
+    var inter4 //敌机移动
     document.onkeydown = function (event) {
+        // 控制玩家飞机移动、开火
         var key = event.key
         console.log(key);
         if (key == 'w' && bottom < 536) {
-            bottom += 10
+            bottom += 20
         } else if (key == 's' && bottom > 0) {
-            bottom -= 10
+            bottom -= 20
         } else if (key == 'a' && lef > 0) {
-            lef -= 10
+            lef -= 20
         } else if (key == 'd' && lef < 826) {
-            lef += 10
+            lef += 20
         } else if (key == ' ') {
-            setInterval(function () {
-
-            }, 500)
-            var imgNode = document.createElement('img')
-            imgNode.src = './images/bullet_01.png'
-            imgNode.style.width = 40 + 'px'
-            imgNode.style.height = 40 + 'px'
-            imgNode.style.position = 'absolute'
-            var p_bottom = bottom + 60
-            imgNode.style.bottom = p_bottom + 'px'
-            imgNode.style.left = lef + 16 + 'px'
-            bg.appendChild(imgNode)
-            setTimeout(function () {
-                var inter1 = setInterval(function () {
-                    if (p_bottom < 540) {
-                        p_bottom += 40
-                        imgNode.style.bottom = p_bottom + 'px'
-                        bg.appendChild(imgNode)
-                    } else {
-                        imgNode.remove()
-                    }
-                }, 50)
+            if (!fire) {
+                // alert('已启动全屏攻击')
+                fire = true
+                inter1 = setInterval(function () {
+                    OutZidan(bottom, lef)
+                }, 160)//生产子弹、子弹生产速度
+                inter3 = setInterval(function () {
+                    OutEnemy()
+                }, 1800) //生成敌机、生成速度
+            } else {
                 window.clearInterval(inter1);
-            }, 500)
+                window.clearInterval(inter3);
+                // window.clearInterval(inter4);
+                fire = false
+            }
         }
         feiji.style.bottom = bottom + 'px'
         feiji.style.left = lef + 'px'
+
+        function OutZidan(bo, le) {
+            var zidan = document.createElement('img')
+            zidan.src = './images/bullet_01.png'
+            // zidan.src = './images/45.gif'
+            zidan.style.width = 40 + 'px'
+            zidan.style.height = 40 + 'px'
+            zidan.style.position = 'absolute'
+            var p_bottom = bottom + 60
+            zidan.style.bottom = p_bottom + 'px'
+            zidan.style.left = lef + 16 + 'px'
+            bg.appendChild(zidan)
+            inter2 = setInterval(function () {
+                if (p_bottom < 520) {
+                    p_bottom += 40
+                    zidan.style.bottom = p_bottom + 'px'
+                    bg.appendChild(zidan)
+                    // if (zidan.style.bottom == diji.style.bottom) {
+                    //     console.log(123);
+                    // }
+                } else {
+                    zidan.remove()
+                }
+            }, 60)//子弹移动速度
+        }
+        function OutEnemy() {
+            var diji = document.createElement('img')
+            diji.src = './images/enemy.png'
+            // diji.src = './images/bz.gif'
+            diji.style.width = '100px'
+            diji.style.height = '100px'
+            diji.style.position = 'absolute'
+            var d_position_left = parseInt(Math.random() * 9)
+            d_bottom = 560
+            diji.style.bottom = d_bottom + 'px'
+            diji.style.left = d_position_left * 60 + 'px'
+            bg.appendChild(diji)
+            inter4 = setInterval(function () {
+                if (d_bottom >= 40) {
+                    d_bottom -= 40
+                    diji.style.bottom = d_bottom + 'px'
+                    bg.appendChild(diji)
+                } else {
+                    diji.remove()
+                    window.clearInterval(inter4);
+                }
+            }, 80) //飞行速度
+        }
+        
     }
 </script>

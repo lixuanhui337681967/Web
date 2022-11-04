@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>飞机大战</title>
+    <!-- 1.飞机移动+炮弹生成到消失 -->
+    <!-- 2.飞机大战，敌方战机生成和遭遇炮弹，和炮弹一起消失 -->
+    <style>
+        div {
+            width: 900px;
+            height: 600px;
+            background-image: url(./images/background.jpg);
+            background-size: 900px 600px;
+            /* background-color: pink; */
+            margin: 0 auto;
+            position: relative;
+        }
+
+        #img1 {
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="bg">
+        <!-- 74*64 -->
+        <img id="img1" src="./images/paddle2_1.png" alt="">
+    </div>
+</body>
+
+</html>
+<script>
+    var feiji = document.getElementById('img1')
+    setInterval(function(){
+        setInterval(function(){
+            feiji.src = './images/paddle_1.png'
+        },100)
+        setInterval(function(){
+            feiji.src = './images/paddle_1.png'
+        },100)
+        setInterval(function(){
+            feiji.src = './images/paddle_1.png'
+        },100)
+        setInterval(function(){
+            feiji.src = './images/paddle_1.png'
+        },100)
+    },100)
+    bottom = 0
+    lef = 413
+    feiji.style.bottom = bottom + 'px'
+    feiji.style.left = lef + 'px'
+    var fire = false //设置开火状态，默认 没有开火false
+    var inter1 //生成子弹
+    var inter2 //子弹移动
+    document.onkeydown = function (event) {
+        // 控制玩家飞机移动、开火
+        var key = event.key
+        console.log(key);
+        if (key == 'w' && bottom < 536) {
+            bottom += 10
+        } else if (key == 's' && bottom > 0) {
+            bottom -= 10
+        } else if (key == 'a' && lef > 0) {
+            lef -= 10
+        } else if (key == 'd' && lef < 826) {
+            lef += 10
+        } else if (key == ' ') {
+            if (!fire) {
+                fire = true
+                inter1 = setInterval(function () {
+                    var zidan = document.createElement('img')
+                    zidan.src = './images/ball.png'
+                    zidan.style.width = 40 + 'px'
+                    zidan.style.height = 40 + 'px'
+                    zidan.style.position = 'absolute'
+                    var p_bottom = bottom + 60
+                    zidan.style.bottom = p_bottom + 'px'
+                    zidan.style.left = lef + 16 + 'px'
+                    bg.appendChild(zidan)
+                    inter2 = setInterval(function () {
+                        if (p_bottom < 520) {
+                            p_bottom += 40
+                            zidan.style.bottom = p_bottom + 'px'
+                            bg.appendChild(zidan)
+                        } else {
+                            zidan.remove()
+                        }
+                    }, 60)//子弹移动速度
+                }, 150)//子弹生产速度
+            } else {
+                window.clearInterval(inter1);
+                fire = false
+            }
+            // // 生成敌机
+            // var inter3 = setTimeout(function(){
+            //     var diji = document.createElement('img')
+            //     diji.src = './images/enemy.png'
+            //     // d_bottom = 0
+            //     // d_lef = 413
+            //     // diji.style.bottom = d_lef + 'px'
+            //     // diji.style.left = d_lef + 'px'
+            //     bg.appendChild(diji)
+            // },1000)
+        }
+        feiji.style.bottom = bottom + 'px'
+        feiji.style.left = lef + 'px'
+    }
+</script>
