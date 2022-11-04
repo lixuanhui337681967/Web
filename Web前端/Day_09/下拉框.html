@@ -7,6 +7,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="./js/jquery-3.4.1.min.js"></script>
+    <script>
+        $(function () {
+            var btn = $('#btn').click(function () {
+                if (btn[0].innerText == '显示') {
+                    for (let index = 1; index <= 3; index++) {
+                        var divNode = document.createElement('div')
+                        divNode.innerText = '选项' + index
+                        divNode.style.cssText = 'background-color:#99d4ff;text-decoration:underline;color:661d80'
+                        $('#bg')[0].appendChild(divNode)
+                    }
+                    btn[0].innerText = '关闭'
+                } else if (btn[0].innerText == '关闭') {
+                    btn[0].innerText = '显示'
+                    var child = $('#bg')[0].lastElementChild;
+                    while (child) {
+                        $('#bg')[0].removeChild(child)
+                        child = $('#bg')[0].firstElementChild;
+                    }
+                }
+            })
+        })
+    </script>
     <style>
         * {
             font-size: 30px;
@@ -20,31 +42,10 @@
 </head>
 
 <body>
-    <button id="btn">按钮</button>
+    <button id="btn">显示</button>
     <div id="bg" style="width: 200px; text-align: center;">
+
     </div>
 </body>
-
-<script>
-    $(function () {
-        var btn = $('#btn').click(function () {
-            if (btn[0].innerText == '按钮') {
-                for (let index = 1; index <= 3; index++) {
-                    var divNode = document.createElement('div')
-                    divNode.innerText = '选项' + index
-                    divNode.style.backgroundColor = '#99d4ff'
-                    divNode.style.textDecoration = 'underline'
-                    divNode.style.color = '#661d80'
-                    // $('#bg').append(divNode)
-                    $('#bg')[0].appendChild(divNode)
-                }
-                btn[0].innerText = '已禁用'
-                btn[0].disabled = true
-            } else if (btn[0].innerText == '已禁用') {
-                console.log($('div'));
-            }
-        })
-    })
-</script>
 
 </html>
