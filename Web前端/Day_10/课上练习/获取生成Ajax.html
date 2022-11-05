@@ -10,25 +10,21 @@
     <script>
         $(function () {
             $('#b1').click(function () {
-                $.post('../user.xml', function (data, status) {
-                    $(data).find('user').each(function () {
-                        var id = $(this).find('id')[0].innerHTML
-                        var name = $(this).find('name')[0].innerHTML
-
-                        var tableNode = $('#tab1')
-                        var trNode = $('<tr></tr>')
-                        var tdNode1 = $('<td></td>')
-                        var tdNode2 = $('<td></td>')
-
-                        tdNode1.html(id)
-                        tdNode2.html(name)
-                        trNode.append(tdNode1)
-                        trNode.append(tdNode2)
-                        tableNode.append(trNode)
-
-                        // var t1 = $('#d1').append('<tr> <td>' + id + '</td>' + '<td>' + name + '</td> </tr>');
-                        // $('#d1').after(t1)
-                    })
+                $('#b1')[0].disabled = true
+                var tableNode = $('#tab1')
+                $.ajax({
+                    url: './user.json', success: function (event) {
+                        for (let index = 0; index < event.length; index++) {
+                            var trNode = $('<tr></tr>')
+                            var tdNode1 = $('<td></td>')
+                            var tdNode2 = $('<td></td>')
+                            tdNode1.html(event[index].id)
+                            tdNode2.html(event[index].name)
+                            trNode.append(tdNode1)
+                            trNode.append(tdNode2)
+                            tableNode.append(trNode)
+                        }
+                    }
                 })
             })
         })
@@ -38,9 +34,9 @@
 </head>
 
 <body>
-    <button id="b1">按钮</button>
+    <button id="b1">点击生成班级成员</button>
     <div id="d1"></div>
-    <table id="tab1"  cellspacing="0" cellpadding="4"  border="1px" style="text-align: center;">
+    <table id="tab1" cellspacing="0" cellpadding="4" border="1px" style="text-align: center;">
         <tr>
             <td>学号</td>
             <td>姓名</td>
