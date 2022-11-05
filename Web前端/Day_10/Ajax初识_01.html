@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax初识</title>
+    <script src="./Js/jquery-3.4.1.min.js"></script>
+    <script>
+        window.onload = function () {
+            var xmlhttp;
+            if (window.XMLHttpRequest) {
+                xmlhttp = new XMLHttpRequest()
+            } else {
+                xmlhttp = new ActiveXObject()
+            }
+            xmlhttp.open('GET', '123.txt', false)
+            xmlhttp.send();
+            console.log(xmlhttp.responseText);
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                document.getElementById('d1').innerHTML = xmlhttp.responseText
+            } else {
+                console.log('请求错误');
+            }
+            // xmlhttp.onready
+        }
+    </script>
+</head>
+
+<body>
+    <!-- <img src="../Day_08/飞机大战/images/73.png" alt=""> -->
+    <div id="d1"></div>
+</body>
+
+</html>
