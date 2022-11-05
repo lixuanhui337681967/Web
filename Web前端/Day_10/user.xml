@@ -1,0 +1,14 @@
+<users>
+    <user>
+        <id>1</id>
+        <name>一</name>
+    </user>
+        <user>
+        <id>2</id>
+        <name>二</name>
+    </user>
+        <user>
+        <id>3</id>
+        <name>三</name>
+    </user>
+</users>

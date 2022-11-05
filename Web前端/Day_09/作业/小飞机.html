@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script>
+        $(function () {
+            var btn
+            var isExist = false
+            $(document).scroll(function (evt) {
+                console.log($(document).scrollTop())
+                if ($(document).scrollTop() >= 800 && !isExist) {
+                    isExist = true
+                    btn = document.createElement("a")
+                    btn.style.display = "block"
+                    btn.style.width = "100px";
+                    btn.style.height = "100px"
+                    btn.style.backgroundColor = "red"
+                    btn.style.position = "fixed"
+                    btn.style.top = "400px"
+                    btn.style.right = "0px"
+                    btn.setAttribute('id','xiaofeiji')
+                    btn.href = "#tar"
+                    btn.innerText = "回顶部"
+                    btn.style.textAlign = "center"
+                    btn.style.lineHeight = "100px"
+                    btn.style.textDecoration = "none"
+                    document.body.append(btn)
+                }
+                if ($(document).scrollTop() < 800 && isExist) {
+                    $('#xiaofeiji').remove()
+                    
+                    isExist = false
+                }
+            })
+        })
+    </script>
+    <style>
+        #scroll {
+            width: 300px;
+            height: 5000px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <span id="tar">
+        顶部
+    </span>
+
+    <dl id="scroll">
+
+    </dl>
+
+
+</body>
+
+</html>

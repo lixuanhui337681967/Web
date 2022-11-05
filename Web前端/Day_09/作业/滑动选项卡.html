@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script>
+        $(function () {
+            $('.span1').click(function () {
+                $(".div1").stop()
+                $(".div2").stop()
+                $(".div3").stop()
+                $('span')[0].style.backgroundColor = '#ffce00'
+                $('span')[1].style.backgroundColor = '#808080'
+                $('span')[2].style.backgroundColor = '#808080'
+                $(".div1").animate({ width: 500, fontSize: '40px' }, 500, function () { })
+                $(".div2").animate({ width: 0, fontSize: '0px' }, 500, function () { })
+                $(".div3").animate({ width: 0, fontSize: '0px' }, 500, function () { })
+            })
+            $('.span2').click(function () {
+                $(".div1").stop()
+                $(".div2").stop()
+                $(".div3").stop()
+                $('span')[0].style.backgroundColor = '#808080'
+                $('span')[1].style.backgroundColor = '#ffce00'
+                $('span')[2].style.backgroundColor = '#808080'
+                $(".div1").animate({ width: 0, fontSize: '0px' }, 500, function () { })
+                $(".div2").animate({ width: 500, fontSize: '40px' }, 500, function () { })
+                $(".div3").animate({ width: 0, fontSize: '0px' }, 500, function () { })
+            })
+            $('.span3').click(function () {
+                $(".div1").stop()
+                $(".div2").stop()
+                $(".div3").stop()
+                $('span')[0].style.backgroundColor = '#808080'
+                $('span')[1].style.backgroundColor = '#808080'
+                $('span')[2].style.backgroundColor = '#ffce00'
+                $(".div1").animate({ width: 0, fontSize: '0px' }, 500, function () { })
+                $(".div2").animate({ width: 0, fontSize: '0px' }, 500, function () { })
+                $(".div3").animate({ width: 500, fontSize: '40px' }, 500, function () { })
+            })
+
+        })
+    </script>
+    <style>
+        #d2 {
+            width: 500px;
+            height: 300px;
+            background-color: #ffce00;
+            text-align: center;
+            /* line-height: 300px; */
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .span1,
+        .span2,
+        .span3 {
+            display: inline-block;
+            width: 100px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 20px;
+            text-align: center;
+            background-color: #808080;
+        }
+
+        .div1,
+        .div2,
+        .div3 {
+            display: inline-block;
+            width: 500px;
+            font-size: 40px;
+            text-align: center;
+        }
+    </style>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <div id="d1">
+        <span class="span1">01</span>
+        <span class="span2">02</span>
+        <span class="span3">03</span>
+    </div>
+    <div id="d2">
+        <div class="div1">内容1</div>
+        <div class="div2">内容2</div>
+        <div class="div3">内容3</div>
+    </div>
+</body>
+
+</html>

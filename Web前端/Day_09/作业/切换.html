@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tab滑动</title>
+        <script src="../js/jquery-3.4.1.min.js"></script>
+    <script>
+        $(function () {
+            for (let index = 0; index < 3; index++) {
+                $('span')[index].onmouseover = function () {
+                    if ($('span')[index].style.backgroundColor != 'blue') {
+                        $('span')[index].style.backgroundColor = 'pink'
+                    }
+                }
+                if (index == 0) {
+                    $('span')[0].onclick = function () {
+                        $('span')[0].style.backgroundColor = 'blue'
+                        $('span')[1].style.backgroundColor = 'green'
+                        $('span')[2].style.backgroundColor = 'green'
+                        $('#d2').text('内容1')
+                        $('#d2')[0].style.backgroundColor = '#fff000'
+                    }
+                } else if (index == 1) {
+                    $('span')[1].onclick = function () {
+                        $('span')[1].style.backgroundColor = 'blue'
+                        $('span')[0].style.backgroundColor = 'green'
+                        $('span')[2].style.backgroundColor = 'green'
+                        $('#d2').text('内容2')
+                        $('#d2')[0].style.backgroundColor = '#808080'
+                    }
+                } else if (index == 2) {
+                    $('span')[2].onclick = function () {
+                        $('span')[2].style.backgroundColor = 'blue'
+                        $('span')[0].style.backgroundColor = 'green'
+                        $('span')[1].style.backgroundColor = 'green'
+                        $('#d2').text('内容3')
+                        $('#d2')[0].style.backgroundColor = '#ffa500'
+                    }
+                }
+                $('span')[index].onmouseout = function () {
+                    if ($('span')[index].style.backgroundColor != 'blue') {
+                        $('span')[index].style.backgroundColor = 'green'
+                    }
+                }
+            }
+    
+        })
+    </script>
+    <style>
+        #d2 {
+            width: 600px;
+            height: 300px;
+            background-color: blanchedalmond;
+            font-size: 40px;
+            text-align: center;
+            line-height: 260px;
+        }
+
+        .span1,
+        .span2,
+        .span3 {
+            display: inline-block;
+            width: 200px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 20px;
+            text-align: center;
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="d1">
+        <span class="span1">标题1</span><span class="span2">标题2</span><span class="span3">标题3</span>
+    </div>
+    <div id="d2">默认内容</div>
+</body>
+
+</html>
