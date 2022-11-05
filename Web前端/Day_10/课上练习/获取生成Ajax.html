@@ -15,13 +15,19 @@
                 $.ajax({
                     url: './user.json', success: function (event) {
                         for (let index = 0; index < event.length; index++) {
+                            element = event[index]
+                            // console.log(typeof(element));
+                            
+                            // JS写法
+                            // var trNode = doc ument.createElement('tr')
+
+                            // jQuery写法
                             var trNode = $('<tr></tr>')
                             var tdNode1 = $('<td></td>')
                             var tdNode2 = $('<td></td>')
-                            tdNode1.html(event[index].id)
-                            tdNode2.html(event[index].name)
-                            trNode.append(tdNode1)
-                            trNode.append(tdNode2)
+                            tdNode1.html(element.id)
+                            tdNode2.html(element.name)
+                            trNode.append(tdNode1,tdNode2)
                             tableNode.append(trNode)
                         }
                     }
@@ -37,7 +43,7 @@
     <button id="b1">点击生成班级成员</button>
     <div id="d1"></div>
     <table id="tab1" cellspacing="0" cellpadding="4" border="1px" style="text-align: center;">
-        <tr>
+        <tr c>
             <td>学号</td>
             <td>姓名</td>
         </tr>

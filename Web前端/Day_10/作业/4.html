@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../Js/jquery-3.4.1.min.js"></script>
+    <script>
+        $(function () {
+            var hf = 'https://www.baidu.com'
+            var time = 1000
+            $('#btn').click(function () {
+                var username = $('#username').val()
+                var password = $('#password').val()
+                var remember = $('#remember').val()
+                if(remember == 'on'){
+                    remember = 'true'
+                }
+                $.ajax({
+                    url  : "http://yapi.shangyuninfo.com/mock/117/list666/good",
+                    type : 'POST',
+                    data : {
+                        "username" : username,
+                        "password" : password,
+                        "remember" : remember
+                    },
+                    dataType: 'JSON',
+                    success: function (result) {
+                        console.log(result);
+                        alert(time/1000 + 's后跳转到' + hf)
+                        setInterval(function () {
+                            window.location.href = hf
+                        }, time)
+                    }
+                })
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>姓名:</td>
+            <td>
+                <input type="text" id="username">
+            </td>
+        </tr>
+        <tr>
+            <td>密码:</td>
+            <td>
+                <input type="password" id="password">
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="checkbox" id="remember">记住我
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button id="btn">登陆</button></td>
+        </tr>
+    </table>
+</body>
+
+</html>

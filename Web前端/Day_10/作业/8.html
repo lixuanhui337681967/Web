@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../Js/jquery-3.4.1.min.js"></script>
+    <script>
+        $(function(){
+            var bd = $('body')
+            $.ajax({
+                url  : 'http://yapi.shangyuninfo.com/mock/117/list666/web14?name=dongyi',
+                type : 'GET',
+                dataType : 'JSON',
+                success : function(result){
+                    console.log(result);
+                    bd.append(result.text)
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

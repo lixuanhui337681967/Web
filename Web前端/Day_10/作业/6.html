@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../Js/jquery-3.4.1.min.js"></script>
+    <script>
+        $(function(){
+            var box = $('#box1')
+            $('#btn').click(function(){
+                $.ajax({
+                    url  : "http://yapi.shangyuninfo.com/mock/117/list666/t",
+                    type : "POST",
+                    data : {
+                        "like" : "游泳",
+                        "paly" : "篮球"
+                    },
+                    dataType : "JSON",
+                    success : function(result){
+                        console.log(result);
+                        box.append(result.severe)
+                        box.append(result.sharp)
+
+                    }
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+    <button id="btn">谁牛逼</button>
+    <div id="box1"></div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../Js/jquery-3.4.1.min.js"></script>
+    <script>
+        $(function () {
+            $('#btn').click(function () {
+                $('#btn')[0].disabled = true
+                var tableNode = $('#tab1')
+                $.ajax({
+                    url: 'http://jsonplaceholder.typicode.com/posts?userId=5',
+                    type: 'GET',
+                    dataType: 'JSON',
+                    success: function (event) {
+                        for (let index = 0; index < event.length; index++) {
+                            const element = event[index];
+                            console.log(element);
+                            var a1 = parseInt(Math.random() * 255)
+                            var a2 = parseInt(Math.random() * 255)
+                            var a3 = parseInt(Math.random() * 255)
+                            Rgbcolor = 'rgb(' + a1 + ',' + a2 + ',' + a3 + ')'
+                            var trNode = $('<tr></tr>')
+                            var tdNode = $('<td></td>')
+                            tdNode.html(element.title)
+                            trNode.append(tdNode)
+                            trNode[0].style.color = Rgbcolor
+                            tableNode.append(trNode)
+                        }
+                    }
+                })
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <button id="btn">请求数据</button>
+    <div id="d1">
+        <table id="tab1">
+
+        </table>
+    </div>
+</body>
+
+</html>

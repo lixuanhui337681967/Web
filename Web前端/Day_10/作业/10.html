@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../Js/jquery-3.4.1.min.js"></script>
+    <script>
+        $(function(){
+            var box = $('#box1')
+            $('#btn').click(function(){
+                var username = $('#name').val()
+                // console.log(username);
+                $.ajax({
+                    url  : 'http://yapi.shangyuninfo.com/mock/117/list666/web04?q=' + username,
+                    type : 'GET',
+                    // dataType : 'JSON',
+                    success : function(result){
+                        // console.log(result);
+                        box.append(result.text)
+                    }
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>输入姓名:</td>
+            <td>
+                <input type="text" id="name">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button id="btn">获取帅哥</button>
+            </td>
+            <td></td>
+        </tr>
+    </table>
+    <div id="box1"></div>
+</body>
+</html>
