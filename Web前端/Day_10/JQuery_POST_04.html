@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script>
+        $(function () {
+            $('#b1').click(function () {
+                $.post('user.xml', {
+                    'name': '璇辉',
+                    'age': 22
+                }, function (data, status) {
+                    console.log(data);
+                    debugger
+                    $(data).find('user').each(function () {
+                        console.log($(this).find('id')[0].innerHTML)
+                        console.log($(this).find('name')[0].innerHTML)
+                    }) 
+                    console.log(status);
+                    $('#d1').text(data)
+                })
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <button id="b1">按钮</button>
+    <div id="d1"></div>
+</body>
+
+</html>
