@@ -15,7 +15,7 @@
                 var username = $('#username').val()
                 var password = $('#password').val()
                 var remember = $('#remember').val()
-                if(remember == 'on'){
+                if (remember == 'on') {
                     remember = 'true'
                 }
                 $.ajax({
@@ -29,7 +29,7 @@
                     dataType: 'JSON',
                     success: function (result) {
                         console.log(result);
-                        alert(time/1000 + 's后跳转到' + hf)
+                        alert(time / 1000 + 's后跳转到' + hf)
                         setInterval(function () {
                             window.location.href = hf
                         }, time)
