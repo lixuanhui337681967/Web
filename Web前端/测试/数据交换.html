@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.4.1.min.js"></script>
+    <script>
+        $(function () {
+            var box1 = $('#box1')
+            var box2 = $('#box2')
+            var num = 0
+            $.ajax({
+                url: 'http://jsonplaceholder.typicode.com/posts?userId=5',
+                type: 'GET',
+                dataType: 'JSON',
+                success: function (result) {
+                    for (let index = 0; index < result.length; index++) {
+                        const element = result[index];
+                        var a1 = parseInt(Math.random() * 255)
+                        var a2 = parseInt(Math.random() * 255)
+                        var a3 = parseInt(Math.random() * 255)
+                        Rgbcolor = 'rgb(' + a1 + ',' + a2 + ',' + a3 + ')'
+                        var pNode = $('<p></p>')
+                        pNode.html(element.title)
+                        pNode.addClass('duanluo')
+                        pNode[0].style.color = Rgbcolor
+                        pNode[0].style.cursor = 'pointer'
+                        box1.append(pNode)
+
+                    }
+                    $('.duanluo').click(function(){
+                            // console.log(this);
+                            if(this.parentNode.id == 'box1'){
+                                box2.append(this)
+                            }else{
+                                box1.append(this)
+                            }
+                    })
+                    // var num1 = $('#box1 .duanluo').length
+                    window.onkeydown = function (event) {
+                        var key = event.key
+                        var length = $('#box1 .duanluo').length
+                        if (key == ' ') {
+                            if(length > 0){
+                                console.log(length);
+                                box2.append($('.duanluo')[num])
+                            }else{
+                                console.log(length);
+                                // box1.append($('.duanluo')[num])
+                            }
+                        }
+                    }
+                }
+            })
+
+        })
+        
+    </script>
+    <style>
+        div {
+            float: left;
+        }
+
+        #box1 {
+            width: 600px;
+            height: 600px;
+            /* background-color: red; */
+            border: 1px solid black;
+            margin-left: 30px;
+        }
+
+        #box2 {
+            width: 600px;
+            height: 600px;
+            /* background-color: red; */
+            border: 1px solid black;
+            margin-left: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div id="box1">
+
+        </div>
+        <div>
+            <img src="./images/arrow.png" width="400px" height="400px" id="arrow">
+        </div>
+        <div id="box2">
+
+        </div>
+    </div>
+</body>
+
+</html>
